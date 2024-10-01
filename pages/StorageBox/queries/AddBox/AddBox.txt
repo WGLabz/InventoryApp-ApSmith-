@@ -1,3 +1,2 @@
-INSERT INTO boxes(
-	box_label, box_code, box_qr_code_file)
-	VALUES ({{label}}, {{code}}, {{qrfile}});
+INSERT INTO public.boxes (box_label, box_code, box_qr_code_file)
+VALUES ({{ ContainerLabelInput.text  }},{{ AutoGenLabel.text }},'tak');

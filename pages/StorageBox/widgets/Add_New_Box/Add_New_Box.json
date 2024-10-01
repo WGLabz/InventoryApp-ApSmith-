@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 390,
+      "bottomRow": 760,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -57,7 +57,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 398,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +74,7 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "onClose": "{{GetBoxes.run()}}",
   "parentColumnSpace": 11.59375,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -80,6 +85,6 @@
   "type": "MODAL_WIDGET",
   "version": 2,
   "widgetId": "jjkus0v3sh",
-  "widgetName": "Modal1",
+  "widgetName": "Add_New_Box",
   "width": 456
 }

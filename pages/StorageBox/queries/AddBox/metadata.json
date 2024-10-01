@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO boxes(\n\tbox_label, box_code, box_qr_code_file)\n\tVALUES ({{label}}, {{code}}, {{qrfile}});",
+      "body": "INSERT INTO public.boxes (box_label, box_code, box_qr_code_file)\nVALUES ({{ ContainerLabelInput.text  }},{{ AutoGenLabel.text }},'tak');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000

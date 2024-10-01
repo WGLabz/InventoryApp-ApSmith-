@@ -30,7 +30,7 @@
   "mobileRightColumn": 6,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Modal1.name);}}",
+  "onClick": "{{BoxCount.run().then(() => {\n  showModal(Add_New_Box.name);\n});}}",
   "parentColumnSpace": 11.59375,
   "parentId": "0",
   "parentRowSpace": 10,

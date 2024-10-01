@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"boxes\" LIMIT 10;",
+      "body": "SELECT * FROM public.\"boxes\";",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,10 @@
       "name": "Koyeb Postgres DB",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [],
     "executeOnLoad": true,
     "name": "GetBoxes",
     "pageId": "StorageBox",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }
