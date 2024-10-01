@@ -24,5 +24,21 @@ export default {
 		AutoGenLabel.setValue(label);
 
 		return 1;
+	},
+	async RemoveContainer(){
+		RemoveContainer.run().then( r =>{
+			showAlert('Removed the container sucessfully!','success');
+			GetBoxes.run()
+		}).catch(e => {
+			showAlert('Failed to remove the container!','error')
+		});
+	},
+	async UpdateContainer(){
+	UpdateContainer.run().then( r =>{
+			showAlert('Updated the container sucessfully!','success');
+			GetBoxes.run()
+		}).catch(e => {
+			showAlert('Failed to update the container!','error')
+		});
 	}
 }

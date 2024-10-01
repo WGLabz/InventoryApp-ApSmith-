@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_ca4d59ae-839f-4020-8f50-e8e303d3c9d6",
-  "id": "StorageBox_BoxCount",
+  "gitSyncId": "66f948a7fbfff512a970867b_150cf5ed-524a-4743-8680-6a673be67a29",
+  "id": "StorageBox_RemoveContainer",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "--SELECT count(1) FROM public.\"boxes\";\nSELECT nextval('public.boxes_box_id_seq') AS count\n--SELECT pg_get_serial_sequence('boxes', 'box_id');\n",
+      "body": "DELETE FROM public.boxes WHERE box_id = {{ Table1.selectedRow.box_id }}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,9 +22,13 @@
       "name": "Koyeb Postgres DB",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
-    "name": "BoxCount",
+    "name": "RemoveContainer",
     "pageId": "StorageBox",
     "userSetOnLoad": false
   }

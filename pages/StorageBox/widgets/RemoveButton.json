@@ -3,38 +3,48 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 5,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "SECONDARY",
+  "buttonColor": "#ef4444",
+  "buttonVariant": "PRIMARY",
   "dynamicBindingPathList": [
     {
-      "key": "buttonColor"
+      "key": "borderRadius"
     },
     {
-      "key": "borderRadius"
+      "key": "isDisabled"
     }
   ],
-  "dynamicTriggerPathList": [],
-  "iconName": "edit",
-  "isDisabled": false,
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "remove",
+  "isDisabled": "{{ !!!Table1.selectedRow.box_id}}",
   "isLoading": false,
   "isVisible": true,
   "key": "59zqpx6oin",
-  "leftColumn": 10,
+  "leftColumn": 5,
   "minWidth": 50,
   "mobileBottomRow": 5,
   "mobileLeftColumn": 2,
   "mobileRightColumn": 6,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
+  "onClick": "{{ContainerScripts.RemoveContainer();}}",
   "parentColumnSpace": 11.59375,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "hug",
-  "rightColumn": 14,
+  "rightColumn": 9,
   "topRow": 1,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "40wum5ixxe",
-  "widgetName": "IconButton1Copy1"
+  "widgetId": "1dz0ejo603",
+  "widgetName": "RemoveButton"
 }

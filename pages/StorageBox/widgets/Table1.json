@@ -37,9 +37,11 @@
     "box_code",
     "box_qr_code_file"
   ],
-  "columnUpdatedAt": 1727744783480,
-  "columnWidthMap": {},
-  "defaultNewRow": "{{GetBoxes.data}}",
+  "columnUpdatedAt": 1727806578468,
+  "columnWidthMap": {
+    "box_label": 401
+  },
+  "defaultNewRow": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
   "defaultSelectedRowIndices": [
@@ -55,9 +57,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "defaultNewRow"
     },
     {
       "key": "primaryColumns.box_id.computedValue"
@@ -125,7 +124,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "box_code",
+      "label": "CODE",
       "notation": "standard",
       "originalId": "box_code",
       "sticky": "",
@@ -158,7 +157,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "box_id",
       "notation": "standard",
       "originalId": "box_id",
@@ -193,7 +192,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "box_label",
+      "label": "LABEL",
       "notation": "standard",
       "originalId": "box_label",
       "sticky": "",
