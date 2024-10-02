@@ -1,0 +1,4 @@
+SELECT o.order_date,o.total_cost,delivery_date,v.vendor_name,v.vendor_icon_type,v.vendor_icon_content FROM orders o
+LEFT
+JOIN vendors v ON v.vendor_id = o.vendor_id
+LIMIT {{Table2.pageSize}} OFFSET {{(Table2.pageNo - 1) * Table2.pageSize}};

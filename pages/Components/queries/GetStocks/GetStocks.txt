@@ -1,0 +1,16 @@
+SELECT c.name,
+c.description,
+c.date_added,
+c.image_content,
+c.image_type,
+b.box_code,
+b.box_label,
+ct.category_name,
+( SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id) AS stock
+FROM components c
+LEFT 
+JOIN boxes b ON b.box_id = c.box_id
+LEFT
+JOIN categories ct ON ct.category_id = c.category_id
+
+LIMIT {{Table1.pageSize}} OFFSET {{(Table1.pageNo - 1) * Table1.pageSize}};
