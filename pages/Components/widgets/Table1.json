@@ -41,7 +41,7 @@
     "box_code",
     "box_label"
   ],
-  "columnUpdatedAt": 1727882648751,
+  "columnUpdatedAt": 1727888388768,
   "columnWidthMap": {
     "box_code": 127
   },
@@ -138,7 +138,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"box_code\"]))}}",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"box_code\"]+' > '+currentRow[\"box_label\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -188,7 +188,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "CONTAINER NAME",
       "notation": "standard",
       "originalId": "box_label",
