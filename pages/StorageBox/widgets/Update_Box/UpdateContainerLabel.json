@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 13,
   "boxShadow": "none",
-  "defaultText": "{{ Table1.selectedRow.box_label}}",
+  "defaultText": "{{ !!Table1.selectedRow.box_label ? Table1.selectedRow.box_label : ''}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -15,13 +15,21 @@
     },
     {
       "key": "defaultText"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "iconAlign": "left",
   "inputType": "TEXT",
-  "isDisabled": false,
+  "isDisabled": "{{!Table1.selectedRow.box_label}}",
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,

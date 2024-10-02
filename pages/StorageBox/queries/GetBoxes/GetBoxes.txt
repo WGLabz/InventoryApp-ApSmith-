@@ -1,1 +1,1 @@
-SELECT * FROM public."boxes";
+SELECT box_id, box_label,box_code, box_qr_file_type,ENCODE(box_qr_content, 'base64') AS QR FROM public."boxes" LIMIT {{Table1.pageSize}} OFFSET {{(Table1.pageNo - 1) * Table1.pageSize}};

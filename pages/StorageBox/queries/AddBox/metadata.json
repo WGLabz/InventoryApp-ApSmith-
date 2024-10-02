@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.boxes (box_label, box_code, box_qr_code_file)\nVALUES ({{ ContainerLabelInput.text  }},{{ AutoGenLabel.text }},'tak');",
+      "body": "INSERT INTO public.boxes (box_label, box_code, box_qr_filename,box_qr_content,box_qr_file_type)\nVALUES ('{{ ContainerLabelInput.text }}','{{ AutoGenLabel.text }}','{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].name : ''}}', DECODE('{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].data.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '') :'' }}','base64'),'{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].type.split(\"/\").pop() : ''}}');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000

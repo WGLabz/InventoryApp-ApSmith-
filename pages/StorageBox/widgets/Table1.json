@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowAddNewRow": true,
+  "allowAddNewRow": false,
   "animateLoading": true,
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -35,12 +35,14 @@
     "box_id",
     "box_label",
     "box_code",
-    "box_qr_code_file"
+    "qr",
+    "box_qr_file_type"
   ],
-  "columnUpdatedAt": 1727806578468,
+  "columnUpdatedAt": 1727854072407,
   "columnWidthMap": {
     "box_label": 401
   },
+  "compactMode": "SHORT",
   "defaultNewRow": "",
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
@@ -68,14 +70,27 @@
       "key": "primaryColumns.box_code.computedValue"
     },
     {
-      "key": "primaryColumns.box_qr_code_file.computedValue"
+      "key": "tableData"
     },
     {
-      "key": "tableData"
+      "key": "primaryColumns.qr.computedValue"
+    },
+    {
+      "key": "primaryColumns.box_qr_file_type.computedValue"
+    },
+    {
+      "key": "totalRecordsCount"
     }
   ],
   "dynamicPropertyPathList": [],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onPageSizeChange"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -96,6 +111,8 @@
   "mobileRightColumn": 7,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onPageChange": "{{GetBoxes.run()}}",
+  "onPageSizeChange": "{{GetBoxes.run();\nBoxCount.run()}}",
   "parentColumnSpace": 11.59375,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -203,21 +220,21 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "box_qr_code_file": {
-      "alias": "box_qr_code_file",
+    "box_qr_file_type": {
+      "alias": "box_qr_file_type",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"box_qr_code_file\"]))}}",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"box_qr_file_type\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "box_qr_code_file",
-      "index": 3,
+      "id": "box_qr_file_type",
+      "index": 5,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -226,9 +243,43 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": false,
-      "label": "box_qr_code_file",
+      "label": "box_qr_file_type",
       "notation": "standard",
-      "originalId": "box_qr_code_file",
+      "originalId": "box_qr_file_type",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "qr": {
+      "alias": "qr",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "image",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'data:image/'+currentRow[\"box_qr_file_type\"]+';base64,'+currentRow[\"qr\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "qr",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "QR",
+      "notation": "standard",
+      "originalId": "qr",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -242,10 +293,11 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
+  "serverSidePaginationEnabled": true,
   "tableData": "{{GetBoxes.data}}",
   "textSize": "0.875rem",
   "topRow": 6,
-  "totalRecordsCount": 0,
+  "totalRecordsCount": "{{ Math.ceil(BoxCount.data[0].count / Table1.pageSize) }}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",

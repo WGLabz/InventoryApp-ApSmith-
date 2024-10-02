@@ -13,6 +13,14 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -21,7 +29,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{!Table1.selectedRow.box_label }}",
   "isLoading": false,
   "isVisible": true,
   "key": "itdlki0myg",

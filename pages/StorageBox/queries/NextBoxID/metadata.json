@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_ca4d59ae-839f-4020-8f50-e8e303d3c9d6",
-  "id": "StorageBox_BoxCount",
+  "gitSyncId": "66f948a7fbfff512a970867b_a9fac14d-8734-4910-9464-670d7cd54f4d",
+  "id": "StorageBox_NextBoxID",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT count(1) FROM public.\"boxes\";\n--SELECT nextval('public.boxes_box_id_seq') AS count\n--SELECT pg_get_serial_sequence('boxes', 'box_id');\n",
+      "body": "SELECT nextval('public.boxes_box_id_seq') AS count",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "BoxCount",
+    "executeOnLoad": false,
+    "name": "NextBoxID",
     "pageId": "StorageBox",
     "userSetOnLoad": false
   }

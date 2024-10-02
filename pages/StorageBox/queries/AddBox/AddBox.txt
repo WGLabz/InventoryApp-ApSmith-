@@ -1,2 +1,2 @@
-INSERT INTO public.boxes (box_label, box_code, box_qr_code_file)
-VALUES ({{ ContainerLabelInput.text  }},{{ AutoGenLabel.text }},'tak');
+INSERT INTO public.boxes (box_label, box_code, box_qr_filename,box_qr_content,box_qr_file_type)
+VALUES ('{{ ContainerLabelInput.text }}','{{ AutoGenLabel.text }}','{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].name : ''}}', DECODE('{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].data.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '') :'' }}','base64'),'{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].type.split("/").pop() : ''}}');
