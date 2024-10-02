@@ -1,0 +1,1 @@
+SELECT vendor_id, vendor_name,contact_email,phone_number, vendor_icon_type,ENCODE(vendor_icon_content, 'base64') AS icon FROM public."vendors" LIMIT {{Table1.pageSize}} OFFSET {{(Table1.pageNo - 1) * Table1.pageSize}};

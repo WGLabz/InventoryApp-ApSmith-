@@ -38,15 +38,19 @@
       "isDefault": false
     },
     {
-      "id": "NewOrder",
+      "id": "New Order",
       "isDefault": false
     },
     {
-      "id": "StorageBox",
+      "id": "Storage Box",
       "isDefault": false
     },
     {
-      "id": "ComponentsCategory",
+      "id": "Components Category",
+      "isDefault": false
+    },
+    {
+      "id": "Vendors",
       "isDefault": false
     }
   ],

@@ -1,0 +1,2 @@
+INSERT INTO public.vendors(vendor_name, website, contact_email, phone_number, vendor_icon_name, vendor_icon_content,vendor_icon_type)
+	VALUES ('{{ VendorNameInput.text }}','{{ WebsiteInput.text }}','{{ EmailInput.text }}','','{{IconPicker.files.length > 0 ? IconPicker.files[0].name : ''}}', DECODE('{{IconPicker.files.length > 0 ? IconPicker.files[0].data.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '') :'' }}','base64'),'{{IconPicker.files.length > 0 ? IconPicker.files[0].type.split("/").pop() : ''}}');

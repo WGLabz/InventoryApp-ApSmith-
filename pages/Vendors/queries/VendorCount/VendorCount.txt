@@ -1,0 +1,3 @@
+SELECT count(1) FROM public."vendors";
+--SELECT nextval('public.boxes_box_id_seq') AS count
+--SELECT pg_get_serial_sequence('boxes', 'box_id');

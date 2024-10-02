@@ -1,0 +1,1 @@
+DELETE FROM public.vendors WHERE vendor_id = {{ Table1.selectedRow.vendor_id }}
