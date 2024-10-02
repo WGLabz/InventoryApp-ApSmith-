@@ -37,11 +37,13 @@
     "vendor_name",
     "contact_email",
     "phone_number",
-    "vendor_icon_type"
+    "vendor_icon_type",
+    "website"
   ],
-  "columnUpdatedAt": 1727861147714,
+  "columnUpdatedAt": 1727886804171,
   "columnWidthMap": {
-    "box_label": 401
+    "box_label": 401,
+    "contact_email": 219
   },
   "compactMode": "DEFAULT",
   "defaultNewRow": "",
@@ -84,6 +86,9 @@
     },
     {
       "key": "primaryColumns.icon.computedValue"
+    },
+    {
+      "key": "primaryColumns.website.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -322,6 +327,40 @@
       "label": "Name",
       "notation": "standard",
       "originalId": "vendor_name",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "website": {
+      "alias": "website",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "url",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"website\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "website",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "website",
+      "notation": "standard",
+      "originalId": "website",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
