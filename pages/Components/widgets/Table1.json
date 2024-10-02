@@ -96,7 +96,14 @@
     }
   ],
   "dynamicPropertyPathList": [],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onPageSizeChange"
+    }
+  ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
@@ -117,6 +124,8 @@
   "mobileRightColumn": 21,
   "mobileTopRow": 8,
   "needsErrorInfo": false,
+  "onPageChange": "{{GetStocks.run()}}",
+  "onPageSizeChange": "{{GetStocks.run()}}",
   "originalBottomRow": 76,
   "originalTopRow": 18,
   "parentColumnSpace": 12.71875,

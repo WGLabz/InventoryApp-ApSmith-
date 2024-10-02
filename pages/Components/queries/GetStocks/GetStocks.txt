@@ -12,5 +12,5 @@ LEFT
 JOIN boxes b ON b.box_id = c.box_id
 LEFT
 JOIN categories ct ON ct.category_id = c.category_id
-
+ORDER BY c.name
 LIMIT {{Table1.pageSize}} OFFSET {{(Table1.pageNo - 1) * Table1.pageSize}};
