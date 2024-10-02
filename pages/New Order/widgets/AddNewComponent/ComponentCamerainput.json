@@ -1,0 +1,35 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "boxShadow": "none",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isCanvas": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isMirrored": true,
+  "isVisible": true,
+  "key": "slehqltul0",
+  "leftColumn": 47,
+  "mobileBottomRow": 48,
+  "mobileLeftColumn": 2,
+  "mobileRightColumn": 27,
+  "mobileTopRow": 15,
+  "mode": "CAMERA",
+  "needsErrorInfo": false,
+  "parentColumnSpace": 6.9375,
+  "parentId": "8c8r3i6nol",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "topRow": 4,
+  "type": "CAMERA_WIDGET",
+  "version": 1,
+  "widgetId": "kc77d592ws",
+  "widgetName": "ComponentCamerainput"
+}

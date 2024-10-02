@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "66f948a7fbfff512a970867b_393cfd7c-517d-454a-8f5b-9d3e24ebc907",
+  "id": "New Order_OrderData",
+  "unpublishedCollection": {
+    "name": "OrderData",
+    "pageId": "New Order",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "orderDetails",
+        "value": "[]"
+      },
+      {
+        "name": "totalCost",
+        "value": "0"
+      }
+    ]
+  }
+}

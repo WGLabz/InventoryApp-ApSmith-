@@ -1,0 +1,4 @@
+INSERT INTO public.order_parts(
+	order_id, component_id, quantity_ordered, unit_cost)
+	VALUES ('{{ this.params.orderid}}', '{{ this.params.componentid}}',
+					'{{ this.params.quantity}}', '{{ this.params.unitcost}}');
