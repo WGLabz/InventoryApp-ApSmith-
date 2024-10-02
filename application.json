@@ -44,6 +44,10 @@
     {
       "id": "StorageBox",
       "isDefault": false
+    },
+    {
+      "id": "ComponentsCategory",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

@@ -1,0 +1,1 @@
+SELECT * FROM public."categories" LIMIT {{Table1.pageSize}} OFFSET {{(Table1.pageNo - 1) * Table1.pageSize}};

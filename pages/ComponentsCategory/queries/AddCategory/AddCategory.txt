@@ -1,0 +1,2 @@
+INSERT INTO public.categories (category_name)
+VALUES ('{{ CategoryNameInput.text }}');
