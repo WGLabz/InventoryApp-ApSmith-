@@ -38,7 +38,7 @@
   "mobileRightColumn": 14,
   "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "onClick": "{{RemoveComponent.run().then(() => {\n  showAlert('Component removed', 'success');\n  GetStocks.run();\n}).catch(() => {\n  showAlert('Failed to remove the component', 'error');\n});}}",
+  "onClick": "{{RemoveComponent.run().then(() => {\n  showAlert('Component removed', 'success');\n  GetStocks.run();\n  GetComponentsCount.run();\n}).catch(() => {\n  showAlert('Failed to remove the component', 'error');\n});}}",
   "parentColumnSpace": 11.59375,
   "parentId": "0",
   "parentRowSpace": 10,
