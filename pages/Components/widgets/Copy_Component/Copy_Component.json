@@ -74,7 +74,7 @@
   "mobileRightColumn": 19,
   "mobileTopRow": 24,
   "needsErrorInfo": false,
-  "onClose": "",
+  "onClose": "{{GetStocks.run()}}",
   "parentColumnSpace": 12.71875,
   "parentId": "0",
   "parentRowSpace": 10,

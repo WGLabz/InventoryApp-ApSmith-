@@ -30,7 +30,7 @@
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ CheckIfComponentExists.data.length > 0}}",
+  "isDisabled": "{{ CheckIfComponentExists.data.length > 0 || !ComponentName.text ||!ComponentCategory.selectedOptionValue || !StorageContainer.selectedOptionValue}}",
   "isLoading": false,
   "isVisible": true,
   "key": "iqeuiizmcq",
@@ -41,7 +41,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{AddNewComponentSQL.run().then(() => {\n  showAlert('Added the component', 'success');\n  closeModal(AddNewComponent.name);\n  GetComponents.run();\n}).catch(() => {\n  showAlert('Failed to add part', 'error');\n});}}",
+  "onClick": "{{AddNewComponentSQL.run().then(() => {\n  showAlert('Added the component', 'success');\n}).catch(() => {\n  showAlert('Failed to add part', 'error');\n});}}",
   "originalBottomRow": 24,
   "originalTopRow": 24,
   "parentId": "phntsrwld0",
