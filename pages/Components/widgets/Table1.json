@@ -147,6 +147,7 @@
   "parentColumnSpace": 12.71875,
   "parentId": "0",
   "parentRowSpace": 10,
+  "primaryColumnId": "component_id",
   "primaryColumns": {
     "box_code": {
       "alias": "box_code",

@@ -15,5 +15,5 @@ LEFT
 JOIN boxes b ON b.box_id = c.box_id
 LEFT
 JOIN categories ct ON ct.category_id = c.category_id
-ORDER BY {{Table1.sortOrder.column}} {{Table1.sortOrder.order}}
+ORDER BY {{!!Table1.sortOrder.column ? Table1.sortOrder.column : 'name'}} {{!!Table1.sortOrder.order ? !!Table1.sortOrder.order : 'desc'}}
 LIMIT {{Table1.pageSize}} OFFSET {{(Table1.pageNo - 1) * Table1.pageSize}};
