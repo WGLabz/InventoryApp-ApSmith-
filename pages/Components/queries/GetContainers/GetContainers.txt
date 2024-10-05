@@ -1,0 +1,2 @@
+SELECT box_id, CONCAT(box_code,' > ',box_label) AS label
+	FROM public.boxes;

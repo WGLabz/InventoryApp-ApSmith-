@@ -1,0 +1,18 @@
+INSERT INTO public.components(
+	name, 
+	imaeg_name,
+	category_id,
+	box_id, 
+	description, 
+	date_added,
+	image_content, 
+	image_type)
+	VALUES ( 
+		'{{ ComponentName.text}}', 
+		'{{ComponentImagePicker.files.length > 0 ? ComponentImagePicker.files[0].name : 'cameraimage.jpg'}}', 
+		{{ ComponentCategory.selectedOptionValue}}, 
+		{{ StorageContainer.selectedOptionValue}}, 
+		'{{ComponentDescription.text}}', 
+		CURRENT_DATE, 
+		DECODE('{{ComponentImagePicker.files.length > 0 ? ComponentImagePicker.files[0].data.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '') : !!ComponentCamerainput.imageDataURL ? ComponentCamerainput.imageDataURL.substring(23) : ''}}','base64'),
+		'{{ComponentImagePicker.files.length > 0 ? ComponentImagePicker.files[0].type.split("/").pop() : 'jpeg'}}');

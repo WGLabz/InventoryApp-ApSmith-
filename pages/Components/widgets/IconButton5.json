@@ -1,0 +1,53 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 20,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "code-block",
+  "isDisabled": "{{!Table1.selectedRow.name}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "nivzw6f90o",
+  "leftColumn": 6,
+  "minWidth": 50,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 10,
+  "mobileTopRow": 16,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(Copy_Component.name).then(() => {\n  showAlert('Component copied sucessfully.', 'success');\n}).catch(() => {\n  showAlert('Failed to copy the component.', 'error');\n});}}",
+  "parentColumnSpace": 11.59375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 10,
+  "topRow": 16,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "jt9lskw61i",
+  "widgetName": "IconButton5"
+}
