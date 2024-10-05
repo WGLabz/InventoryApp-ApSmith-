@@ -25,6 +25,12 @@
   "dynamicTriggerPathList": [
     {
       "key": "onTextChanged"
+    },
+    {
+      "key": "onFocus"
+    },
+    {
+      "key": "onBlur"
     }
   ],
   "errorMessage": "Already exists",
@@ -50,6 +56,8 @@
   "mobileRightColumn": 36,
   "mobileTopRow": 7,
   "needsErrorInfo": false,
+  "onBlur": "{{CheckIfComponentExists.run({\n name: ComponentNameCopy.text\n});}}",
+  "onFocus": "{{CheckIfComponentExists.run({\n  name: ComponentNameCopy.text\n});}}",
   "onTextChanged": "{{CheckIfComponentExists.run({\n name: ComponentNameCopy.text\n});}}",
   "parentColumnSpace": 6.9375,
   "parentId": "1lwejismfi",
