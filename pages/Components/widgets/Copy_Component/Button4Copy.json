@@ -13,16 +13,23 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{ CheckIfComponentExists.data.length > 0}}",
   "isLoading": false,
   "isVisible": true,
   "key": "iqeuiizmcq",
@@ -33,7 +40,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{CopyComponent.run()}}",
+  "onClick": "{{CopyComponent.run().then(() => {\n  showAlert('Copied the component', 'success');\n}).catch(() => {\n  showAlert('Failed to copy the component', 'error');\n});}}",
   "parentId": "1lwejismfi",
   "placement": "CENTER",
   "recaptchaType": "V3",

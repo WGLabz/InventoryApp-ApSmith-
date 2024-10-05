@@ -1,0 +1,1 @@
+DELETE FROM public.components WHERE component_id = {{Table1.selectedRow.component_id}}

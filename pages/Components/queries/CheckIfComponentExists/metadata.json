@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_0ca32afd-1d80-466c-a234-cae169da7cde",
-  "id": "Components_GetStocks",
+  "gitSyncId": "66f948a7fbfff512a970867b_e8784495-8b30-4eff-8fca-1b23fd84ede3",
+  "id": "Components_CheckIfComponentExists",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT c.name,\nc.component_id,\nc.description,\nc.date_added,\nc.image_content,\nc.image_type,\nb.box_code,\nc.category_id,\nb.box_label,\nct.category_name,\nb.box_id,\n( SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id) AS stock\nFROM components c\nLEFT \nJOIN boxes b ON b.box_id = c.box_id\nLEFT\nJOIN categories ct ON ct.category_id = c.category_id\nORDER BY c.name\nLIMIT {{Table1.pageSize}} OFFSET {{(Table1.pageNo - 1) * Table1.pageSize}};\n",
+      "body": "SELECT * FROM public.components WHERE name = {{ this.params.name}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
       }
     ],
     "executeOnLoad": true,
-    "name": "GetStocks",
+    "name": "CheckIfComponentExists",
     "pageId": "Components",
     "userSetOnLoad": false
   }

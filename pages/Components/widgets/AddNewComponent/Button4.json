@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "bottomRow": 24,
+  "bottomRowBeforeCollapse": 28,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonStyle": "PRIMARY_BUTTON",
@@ -13,18 +14,25 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
   "isDefaultClickDisabled": true,
-  "isDisabled": false,
+  "isDisabled": "{{ CheckIfComponentExists.data.length > 0}}",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": false,
   "key": "iqeuiizmcq",
   "leftColumn": 51,
   "minWidth": 120,
@@ -34,6 +42,8 @@
   "mobileTopRow": 18,
   "needsErrorInfo": false,
   "onClick": "{{AddNewComponentSQL.run().then(() => {\n  showAlert('Added the component', 'success');\n  closeModal(AddNewComponent.name);\n  GetComponents.run();\n}).catch(() => {\n  showAlert('Failed to add part', 'error');\n});}}",
+  "originalBottomRow": 28,
+  "originalTopRow": 24,
   "parentId": "phntsrwld0",
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -43,6 +53,7 @@
   "rightColumn": 64,
   "text": "Add",
   "topRow": 24,
+  "topRowBeforeCollapse": 24,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "6io4tspfx3",
