@@ -1,0 +1,3 @@
+SELECT count(1)
+FROM components c
+WHERE c.name LIKE '%{{Table1.searchText}}%'

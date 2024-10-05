@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 80,
+  "bottomRow": 100,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -118,9 +118,12 @@
     },
     {
       "key": "onPageSizeChange"
+    },
+    {
+      "key": "onSearchTextChanged"
     }
   ],
-  "enableClientSideSearch": true,
+  "enableClientSideSearch": false,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
@@ -142,6 +145,7 @@
   "needsErrorInfo": false,
   "onPageChange": "{{GetStocks.run()}}",
   "onPageSizeChange": "{{GetStocks.run()}}",
+  "onSearchTextChanged": "{{GetStocks.run();\nGetComponentsCountFiltered.run()}}",
   "originalBottomRow": 76,
   "originalTopRow": 18,
   "parentColumnSpace": 12.71875,
@@ -567,7 +571,7 @@
   "tableData": "{{GetStocks.data}}",
   "textSize": "0.875rem",
   "topRow": 22,
-  "totalRecordsCount": "{{ GetComponentsCount.data[0].count}}",
+  "totalRecordsCount": "{{ GetComponentsCountFiltered.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,
   "verticalAlignment": "CENTER",

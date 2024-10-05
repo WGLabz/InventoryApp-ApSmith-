@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_b58e70e6-7657-43c6-aae4-f918fda73baa",
-  "id": "Components_GetComponentsCount",
+  "gitSyncId": "66f948a7fbfff512a970867b_1ee9363f-e7c7-41a8-a507-53b4f987157e",
+  "id": "Components_GetComponentsCountFiltered",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT count(1)\nFROM components",
+      "body": "SELECT count(1)\nFROM components c\nWHERE c.name LIKE '%{{Table1.searchText}}%'",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,9 +22,13 @@
       "name": "Koyeb Postgres DB",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": true,
-    "name": "GetComponentsCount",
+    "name": "GetComponentsCountFiltered",
     "pageId": "Components",
     "userSetOnLoad": false
   }
