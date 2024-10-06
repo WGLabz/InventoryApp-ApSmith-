@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  appsmith:
+    image: appsmith/appsmith-ee
+    restart: always
+    environment:
+      - APPSMITH_DB_URL=mongodb://admin:admin@mongo:27017/appsmith?authSource=admin
+      - APPSMITH_REDIS_URI=redis://redis:6379
+    ports:
+      - "8080:80"  # Expose Appsmith on port 8080
+    depends_on:
+      - mongo
+      - redis
+
+  mongo:
+    image: mongo:4.4
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=appsmith
+      - MONGO_REPLICA_SET_NAME=rs0  # Name of the replica set
+    command: ["mongod", "--replSet", "rs0", "--keyFile", "/data/configdb/mongodb-keyfile"]
+    volumes:
+      - mongo_data:/data/db
+      - ./mongodb-keyfile:/data/configdb/mongodb-keyfile:ro  # Mount the key file
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    ports:
+      - "27017:27017"  # Expose MongoDB on port 27017
+
+  redis:
+    image: redis:6
+    restart: always
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"  # Expose Redis on port 6379
+
+  postgres:
+    image: postgres:14-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=appsmith
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"  # Expose PostgreSQL on port 5432
+
+volumes:
+  mongo_data:
+  redis_data:
+  postgres_data:
