@@ -1,0 +1,15 @@
+WITH ordered_used_cte AS (
+	SELECT 
+	c.component_id,
+	c.name,
+	COALESCE((SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id),0) AS ordered,
+	COALESCE((SELECT SUM(quantity_used) FROM project_components WHERE component_id = c.component_id),0) AS used,
+	COALESCE((SELECT SUM(unit_cost) FROM order_parts WHERE component_id = c.component_id),0) AS unit_cost_sum,
+	COALESCE((SELECT COUNT(1) FROM order_parts WHERE component_id = c.component_id),0) AS order_count
+	FROM components c
+)
+SELECT 
+   SUM(ordered - used) as total_stock,
+   SUM((unit_cost_sum / order_count ) * (ordered-used)) as total_value
+FROM 
+    ordered_used_cte;

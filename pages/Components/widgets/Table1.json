@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 100,
+  "bottomRow": 127,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -35,22 +35,26 @@
     "name",
     "category_name",
     "description",
-    "stock",
     "date_added",
     "image_type",
     "box_code",
     "box_label",
     "category_id",
     "box_id",
-    "component_id"
+    "component_id",
+    "purchased",
+    "used",
+    "stock"
   ],
-  "columnUpdatedAt": 1728120573095,
+  "columnUpdatedAt": 1728148987931,
   "columnWidthMap": {
     "box_code": 157,
     "category_name": 134,
     "image_content": 60,
     "name": 367,
-    "stock": 91
+    "purchased": 107,
+    "stock": 91,
+    "used": 83
   },
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
@@ -96,9 +100,6 @@
       "key": "primaryColumns.category_name.computedValue"
     },
     {
-      "key": "primaryColumns.stock.computedValue"
-    },
-    {
       "key": "totalRecordsCount"
     },
     {
@@ -109,6 +110,15 @@
     },
     {
       "key": "primaryColumns.component_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.purchased.computedValue"
+    },
+    {
+      "key": "primaryColumns.used.computedValue"
+    },
+    {
+      "key": "primaryColumns.stock.computedValue"
     }
   ],
   "dynamicPropertyPathList": [],
@@ -528,6 +538,40 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
+    "purchased": {
+      "alias": "purchased",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"purchased\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "purchased",
+      "index": 11,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "BOUGHT",
+      "notation": "standard",
+      "originalId": "purchased",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
     "stock": {
       "alias": "stock",
       "allowCellWrapping": false,
@@ -542,7 +586,7 @@
       "fontStyle": "",
       "horizontalAlignment": "CENTER",
       "id": "stock",
-      "index": 8,
+      "index": 13,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -554,6 +598,40 @@
       "label": "STOCK",
       "notation": "standard",
       "originalId": "stock",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "used": {
+      "alias": "used",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"used\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "used",
+      "index": 12,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "USED",
+      "notation": "standard",
+      "originalId": "used",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

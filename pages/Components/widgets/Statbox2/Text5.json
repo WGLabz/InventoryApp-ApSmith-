@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 37,
   "shouldTruncate": false,
-  "text": "{{ GetStocks.data.reduce((sum, item) => sum + item.stock, 0) }}",
+  "text": "{{GetCurrentStockCountAndValue.data[0].total_stock}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 4,
