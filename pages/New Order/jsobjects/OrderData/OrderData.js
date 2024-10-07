@@ -10,7 +10,8 @@ export default {
 		var quantity = Number(Input1.text);
 		var totalCost = Number(Input2.text);
 		var image = GetComponentImage.data[0].image;
-
+		var url_ = url.text;
+		
 		this.orderDetails.push({
 			id: this.orderDetails.length + 1,
 			componentId: componentId,
@@ -18,7 +19,8 @@ export default {
 			image:image,
 			quantity: quantity,
 			totalcost: totalCost,
-			peritemcost: totalCost / quantity
+			peritemcost: totalCost / quantity,
+			url: url_
 		});
 		showAlert('Item cached for the order','success');
 		resetWidget(AddItemModal.name)
@@ -45,6 +47,7 @@ export default {
 				componentId: 1,
 				component:'Add purchased parts',
 				image:'',
+				urL: '',
 				quantity: 0,
 				totalcost: 0,
 				peritemcost: 0

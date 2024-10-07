@@ -10,7 +10,8 @@ export default {
 					orderid: orderId,
 					componentid: item.componentId,
 					quantity: item.quantity,
-					unitcost: item.peritemcost
+					unitcost: item.peritemcost,
+					url: item.url
 				})
 			});
 			showAlert(orderData.length + ' components added to DB.', 'success')

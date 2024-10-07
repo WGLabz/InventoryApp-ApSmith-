@@ -58,7 +58,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 45,
+  "rightColumn": 55,
   "serverSideFiltering": false,
   "sourceData": "{{GetComponents.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj.component_id } })}}",
   "topRow": 4,
