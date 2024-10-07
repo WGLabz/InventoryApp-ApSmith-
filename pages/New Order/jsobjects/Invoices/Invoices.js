@@ -5,15 +5,15 @@ export default {
 		let invoiceFiles = InvoiceFiles.files;
 		let invoiceCost = InvoiceCost.value;
 		let orderID = Table2.selectedRow.order_id;
-		
+
 		let fileName = InvoiceFiles.files[0].name;
 		let fileType = InvoiceFiles.files[0].type;
-		
+
 		await SaveInvoiceToMinIO.run({
 			filename: orderID+'_'+invoiceCost,
 			content: invoiceFiles[0]
 		});
-		
+
 		await AddInvoice.run({
 			orderid: orderID,
 			description: description,
@@ -24,5 +24,6 @@ export default {
 			bucket: 'inventoryms',
 			filetype: fileType
 		});
+		showAlert('Invoice added sucessfully','success')
 	}
 }

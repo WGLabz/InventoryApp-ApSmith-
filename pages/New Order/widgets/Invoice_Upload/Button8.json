@@ -23,7 +23,11 @@
       "key": "isDisabled"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": "{{ InvoiceFiles.files.length === 0}}",
   "isLoading": false,
@@ -36,6 +40,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
+  "onClick": "{{Invoices.upload();}}",
   "originalBottomRow": 21,
   "originalTopRow": 17,
   "parentId": "n9rzjbv9ub",
