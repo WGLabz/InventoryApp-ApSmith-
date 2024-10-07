@@ -154,9 +154,13 @@ services:
     environment:
       - MINIO_ACCESS_KEY=YOUR_MINIO_ACCESS_KEY
       - MINIO_SECRET_KEY=YOUR_MINIO_SECRET_KEY
-    command: server /data
+      - MINIO_BROWSER_REDIRECT_PORT=9000
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=adminpassword
+    command: server /data --address 0.0.0.0:9000 --console-address 0.0.0.0:9001
     ports:
       - "9000:9000"
+      - "9001:9001"
     volumes:
       - /docker/volumes/minio/data:/data  # MinIO data
     networks:
