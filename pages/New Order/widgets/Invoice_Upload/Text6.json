@@ -1,52 +1,52 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 60,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
     },
     {
-      "key": "fontFamily"
+      "key": "borderRadius"
     },
     {
-      "key": "borderRadius"
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
-  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
-  "fontStyle": "BOLD",
+  "fontFamily": "Roboto",
+  "fontSize": "0.875rem",
+  "fontStyle": "ITALIC",
   "isLoading": false,
   "isVisible": true,
-  "key": "bzneo97ty4",
+  "key": "hnai9won1a",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 58,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 8,
-  "mobileTopRow": 54,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 56,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 60,
-  "originalTopRow": 56,
+  "originalBottomRow": 9,
+  "originalTopRow": 4,
   "overflow": "NONE",
-  "parentColumnSpace": 12.71875,
-  "parentId": "0",
+  "parentColumnSpace": 6.9375,
+  "parentId": "n9rzjbv9ub",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 13,
+  "rightColumn": 63,
   "shouldTruncate": false,
-  "text": "Past Orders",
+  "text": "Upload invoice for {{ Table2.selectedRow.order_date}} from {{Table2.selectedRow.vendor_name}} of cost {{ Table2.selectedRow.total_cost}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 56,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "1q9l7qk9md",
-  "widgetName": "Text4"
+  "widgetId": "kr7ah96861",
+  "widgetName": "Text6"
 }

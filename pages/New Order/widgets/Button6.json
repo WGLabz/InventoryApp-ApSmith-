@@ -1,0 +1,62 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 59,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "upload",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !Table2.selectedRow.vendor_name}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "rxor5psjw1",
+  "leftColumn": 54,
+  "minWidth": 120,
+  "mobileBottomRow": 59,
+  "mobileLeftColumn": 48,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 55,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(Invoice_Upload.name);}}",
+  "originalBottomRow": 59,
+  "originalTopRow": 55,
+  "parentColumnSpace": 13.90625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "Upload Bill",
+  "topRow": 55,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "21f51zri4s",
+  "widgetName": "Button6"
+}

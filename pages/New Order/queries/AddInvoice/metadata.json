@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_615984b9-8041-4438-9589-7dc29236f2bd",
-  "id": "New Order_GetOrders",
+  "gitSyncId": "6703b251c982f54ff180d40c_4099cd66-d711-48d1-86c1-d44d1f38376e",
+  "id": "New Order_AddInvoice",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT '' AS bills,\no.order_id,o.order_date,o.total_cost,delivery_date,v.vendor_name,v.vendor_icon_type,v.vendor_icon_content FROM orders o\nLEFT\nJOIN vendors v ON v.vendor_id = o.vendor_id\nLIMIT {{Table2.pageSize}} OFFSET {{(Table2.pageNo - 1) * Table2.pageSize}};",
+      "body": "INSERT INTO public.invoices(\n order_id, invoice_date, minio_file_name, total_amount, created_at, minio_bucket, minio_file_type, description)\n\tVALUES ({{ this.params.orderid}}, {{ this.params.invoicedate}}, {{ this.params.filename}},{{ this.params.amount}}, {{ this.params.date}},{{ this.params.bucket}},{{ this.params.filetype}}, {{this.params.description}});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "GetOrders",
+    "executeOnLoad": false,
+    "name": "AddInvoice",
     "pageId": "New Order",
     "userSetOnLoad": false
   }
