@@ -40,7 +40,7 @@
     "order_id",
     "bills"
   ],
-  "columnUpdatedAt": 1728315793053,
+  "columnUpdatedAt": 1728367887220,
   "columnWidthMap": {},
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
@@ -87,15 +87,6 @@
     },
     {
       "key": "primaryColumns.bills.computedValue"
-    },
-    {
-      "key": "primaryColumns.bills.boxShadow"
-    },
-    {
-      "key": "primaryColumns.bills.borderRadius"
-    },
-    {
-      "key": "primaryColumns.bills.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -146,12 +137,9 @@
       "alias": "bills",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
       "buttonLabel": "VIEW",
       "cellBackground": "",
-      "columnType": "button",
+      "columnType": "text",
       "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"bills\"]))}}",
       "currencyCode": "USD",
       "customAlias": "",
@@ -169,7 +157,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "INVOICES",
       "menuItemsSource": "STATIC",
       "notation": "standard",
