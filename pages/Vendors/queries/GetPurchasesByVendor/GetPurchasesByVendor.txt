@@ -1,0 +1,4 @@
+SELECT v.vendor_name AS x,SUM(total_cost) as y
+	FROM public.orders o
+	JOIN vendors v ON v.vendor_id = o.vendor_id
+	GROUP BY v.vendor_id

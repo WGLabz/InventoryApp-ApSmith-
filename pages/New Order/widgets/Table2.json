@@ -402,7 +402,7 @@
   "serverSidePaginationEnabled": true,
   "tableData": "{{GetOrders.data}}",
   "textSize": "0.875rem",
-  "topRow": 60,
+  "topRow": 42,
   "totalRecordsCount": "{{ OrdersCount.data[0].count}}",
   "type": "TABLE_WIDGET_V2",
   "version": 2,

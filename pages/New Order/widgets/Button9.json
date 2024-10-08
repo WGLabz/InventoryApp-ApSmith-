@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 59,
+  "bottomRow": 42,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -54,7 +54,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 55,
   "text": "View Bills",
-  "topRow": 55,
+  "topRow": 38,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "fyqrgmhlpc",
