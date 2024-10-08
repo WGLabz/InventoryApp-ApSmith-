@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_1c813b49-b001-41bf-8282-1183fcfd5de4",
+  "gitSyncId": "6703b251c982f54ff180d40c_fe172196-4e2a-4466-9ce2-d1bc401b5d50",
   "unpublishedPage": {
-    "customSlug": "",
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1260,
+          "bottomRow": 590,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 500,
+          "minHeight": 570,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 48,
+          "snapRows": 55,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 90,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "Components",
-    "slug": "components"
+    "name": "Component",
+    "slug": "component"
   }
 }

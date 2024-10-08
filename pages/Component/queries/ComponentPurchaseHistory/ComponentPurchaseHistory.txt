@@ -1,0 +1,7 @@
+SELECT * FROM public.order_parts p
+LEFT
+JOIN public.orders o ON o.order_id = p.order_id
+LEFT
+JOIN public.vendors v ON v.vendor_id = o.vendor_id
+
+WHERE component_id = 44 -- {{ appsmith.URL.queryParams.component}}
