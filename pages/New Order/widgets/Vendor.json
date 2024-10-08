@@ -51,7 +51,7 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 17,
+  "rightColumn": 19,
   "serverSideFiltering": false,
   "sourceData": "{{GetVendors.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj.vendor_id } })}}",
   "topRow": 1,

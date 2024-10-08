@@ -3,12 +3,10 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 10,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#22c55e",
   "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     },
@@ -26,28 +24,34 @@
       "key": "onClick"
     }
   ],
-  "iconName": "plus",
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
   "isDisabled": "{{ !Vendor.selectedOptionValue }}",
   "isLoading": false,
   "isVisible": true,
-  "key": "ugtelipsnc",
+  "key": "kimfmqnusp",
   "leftColumn": 0,
-  "minWidth": 50,
+  "minWidth": 120,
   "mobileBottomRow": 10,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 5,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 28,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
   "onClick": "{{showModal(AddItemModal.name);\nOrderData.calculateTotalCost();}}",
-  "parentColumnSpace": 12.71875,
+  "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
+  "placement": "BETWEEN",
+  "recaptchaType": "V3",
   "renderMode": "CANVAS",
+  "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 4,
+  "rightColumn": 6,
+  "text": "Add",
   "topRow": 6,
-  "type": "ICON_BUTTON_WIDGET",
+  "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "tdz75rg95i",
-  "widgetName": "AddButton"
+  "widgetId": "fm0yr4rynr",
+  "widgetName": "Button11"
 }
