@@ -15,7 +15,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -35,7 +39,7 @@
   "mobileRightColumn": 12,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{GetInvoiceFromMinIO.run({\n  bucket: currentItem.minio_bucket,\n  path: 'invoices/' + currentItem.order_id + '_' + currentItem.total_amount\n}).then(() => {\n  showAlert('Downloading the file', 'success');\n  download(GetInvoiceFromMinIO.data.fileData, currentItem.minio_file_name, currentItem.minio_file_type);\n}).catch(() => {\n  showAlert('Failed to download file.', 'error');\n});}}",
+  "onClick": "{{\n    GetInvoiceFromMinIO.run({\n      bucket: currentItem.minio_bucket,\n      path: 'invoices/' + currentItem.order_id + '_' + currentItem.total_amount\n    }).then(() => {\n      try {\n        download('data:'+currentItem.minio_file_type+';base64,'+GetInvoiceFromMinIO.data.fileData, currentItem.minio_file_name);\n      } catch (e) {\n        showAlert(e);\n      }\n    }).catch(() => {\n      showAlert('Failed to download file.', 'error');\n    });\n  }}",
   "parentColumnSpace": 6.1748046875,
   "parentId": "mn1oy0e7jz",
   "parentRowSpace": 10,
@@ -44,8 +48,8 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 9,
-  "text": "",
+  "rightColumn": 21,
+  "text": "Download",
   "topRow": 0,
   "type": "BUTTON_WIDGET",
   "version": 1,
