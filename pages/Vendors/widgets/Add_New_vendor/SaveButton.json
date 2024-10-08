@@ -26,6 +26,7 @@
     }
   ],
   "iconAlign": "left",
+  "iconName": "saved",
   "isDefaultClickDisabled": true,
   "isDisabled": "{{ !VendorNameInput.text || !WebsiteInput.text || !EmailInput.text || IconPicker.files.length ===0}}",
   "isLoading": false,

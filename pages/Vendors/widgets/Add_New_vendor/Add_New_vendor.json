@@ -74,7 +74,7 @@
   "mobileRightColumn": 40,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClose": "{{GetVendors.run()}}",
+  "onClose": "{{GetVendors.run().then(() => {\n  resetWidget(\"Add_New_vendor\", true);\n});}}",
   "parentColumnSpace": 11.59375,
   "parentId": "0",
   "parentRowSpace": 10,

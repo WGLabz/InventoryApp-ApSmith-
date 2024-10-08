@@ -17,6 +17,8 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "cross",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
