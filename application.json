@@ -10,7 +10,7 @@
     "navigationSetting": {
       "colorStyle": "theme",
       "logoAssetId": "",
-      "logoConfiguration": "logoAndApplicationTitle",
+      "logoConfiguration": "logoOnly",
       "navStyle": "sidebar",
       "orientation": "side",
       "position": "static",
@@ -27,7 +27,7 @@
   "collapseInvisibleWidgets": true,
   "color": "#D6D1F2",
   "evaluationVersion": 2,
-  "icon": "chinese-remnibi",
+  "icon": "shopper",
   "pages": [
     {
       "id": "Home",
@@ -68,7 +68,7 @@
     "navigationSetting": {
       "colorStyle": "theme",
       "logoAssetId": "",
-      "logoConfiguration": "logoAndApplicationTitle",
+      "logoConfiguration": "logoOnly",
       "navStyle": "sidebar",
       "orientation": "side",
       "position": "static",
