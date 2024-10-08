@@ -1,0 +1,57 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "buttonColor": "#e15615",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "remove",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !!!Table1.selectedRow.vendor_id}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "kimfmqnusp",
+  "leftColumn": 9,
+  "minWidth": 120,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 33,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onClick": "{{RemoveVendor.run().then(() => {\n  showAlert('Removed the selected vendor', 'success');\n  GetVendors.run();\n}).catch(() => {\n  showAlert('Failed to remove the selected vendor, it may be in use!', 'error');\n});}}",
+  "parentColumnSpace": 13.90625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 17,
+  "text": "Remove",
+  "topRow": 1,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "zwcnz65p3d",
+  "widgetName": "Button3"
+}

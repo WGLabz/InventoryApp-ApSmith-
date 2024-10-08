@@ -1,1 +1,0 @@
-SELECT nextval('public.vendors_vendor_id_seq') AS count
