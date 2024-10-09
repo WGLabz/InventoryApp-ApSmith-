@@ -38,7 +38,7 @@
   "mobileRightColumn": 51,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onClick": "{{SaveProjectComponents.save();\nresetWidget(\"ProectBOMModal\", true);\nGetProjects.run().then(() => {\n  closeModal(ProectBOMModal.name);\n});}}",
+  "onClick": "{{SaveProjectComponents.save();\nProjectComponentCart.clearCart();\nGetProjects.run().then(() => {\n  closeModal(ProectBOMModal.name);\n});}}",
   "originalBottomRow": 49,
   "originalTopRow": 45,
   "parentColumnSpace": 12.71875,
