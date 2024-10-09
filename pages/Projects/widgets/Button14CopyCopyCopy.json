@@ -27,7 +27,7 @@
   "iconAlign": "left",
   "iconName": "cross",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ !Table2.selectedRow.projectid || !! Table2.selectedRow.videocontent}}",
+  "isDisabled": "{{ !Table2.selectedRow.projectid || !! Table2.selectedRow.videocontent || Table2.selectedRow.componentcount > 0}}",
   "isLoading": false,
   "isVisible": true,
   "key": "lgh8xe3byy",
