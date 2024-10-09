@@ -1,15 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 92,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#e15615",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     },
@@ -28,20 +25,22 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "eye-open",
+  "iconName": "cross",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ !Table2.selectedRow.projectid}}",
+  "isDisabled": "{{ !FilesTable.selectedRow.file_id }}",
   "isLoading": false,
   "isVisible": true,
-  "key": "lgh8xe3byy",
-  "leftColumn": 44,
+  "key": "b8pr5256tx",
+  "leftColumn": 46,
   "minWidth": 120,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 33,
-  "mobileRightColumn": 49,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 77,
+  "mobileLeftColumn": 48,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 73,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Project', {\n  id: Table2.selectedRow.projectid\n}, 'SAME_WINDOW');}}",
+  "onClick": "{{DeleteFile.run().then(() => {\n  showAlert('File removed sucessfully', 'success');\n  GetFiles.run();\n}).catch(() => {\n  showAlert('Failed to remove file.', 'error');\n});}}",
+  "originalBottomRow": 92,
+  "originalTopRow": 88,
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -50,11 +49,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 54,
-  "text": "View Details",
-  "topRow": 0,
+  "rightColumn": 55,
+  "text": "Delete",
+  "topRow": 88,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "u3quvbakyq",
-  "widgetName": "Button14CopyCopy"
+  "widgetId": "7idlta2s6m",
+  "widgetName": "FileRemoveButton"
 }

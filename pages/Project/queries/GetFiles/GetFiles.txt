@@ -1,0 +1,2 @@
+SELECT * FROM public.component_files
+WHERE component_id = {{appsmith.URL.queryParams.component }}

@@ -1,15 +1,12 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
+  "bottomRow": 33,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#22c55e",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     },
@@ -28,20 +25,22 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "eye-open",
+  "iconName": "add",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ !Table2.selectedRow.projectid}}",
+  "isDisabled": "{{ !appsmith.URL.queryParams.component }}",
   "isLoading": false,
   "isVisible": true,
-  "key": "lgh8xe3byy",
-  "leftColumn": 44,
+  "key": "b8pr5256tx",
+  "leftColumn": 55,
   "minWidth": 120,
-  "mobileBottomRow": 4,
-  "mobileLeftColumn": 33,
-  "mobileRightColumn": 49,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 77,
+  "mobileLeftColumn": 48,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 73,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Project', {\n  id: Table2.selectedRow.projectid\n}, 'SAME_WINDOW');}}",
+  "onClick": "{{UpdateDescription.run({\n  content: RichTextEditor1.text\n}).then(() => {\n  GetComponent.run();\n  showAlert('Component description updated', 'success');\n}).catch(() => {\n  showAlert('Failed to update the component description', 'error');\n});}}",
+  "originalBottomRow": 33,
+  "originalTopRow": 29,
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -50,11 +49,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 54,
-  "text": "View Details",
-  "topRow": 0,
+  "rightColumn": 64,
+  "text": "Save",
+  "topRow": 29,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "u3quvbakyq",
-  "widgetName": "Button14CopyCopy"
+  "widgetId": "pywngnflp8",
+  "widgetName": "Button2"
 }

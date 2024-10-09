@@ -64,6 +64,10 @@
     {
       "id": "Box",
       "isDefault": false
+    },
+    {
+      "id": "Project",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
