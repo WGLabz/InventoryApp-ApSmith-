@@ -3,13 +3,10 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 20,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#e15615",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
     {
       "key": "borderRadius"
     },
@@ -28,7 +25,7 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "delete",
+  "iconName": "cross",
   "isDefaultClickDisabled": true,
   "isDisabled": "{{!Table1.selectedRow.name}}",
   "isLoading": false,
