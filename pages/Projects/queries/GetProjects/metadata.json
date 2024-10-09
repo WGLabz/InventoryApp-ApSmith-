@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\tp.project_id AS projectid,\n\tv.video_id AS videoid,\n\tv.script AS videocontent,\n\tvs.status_id AS videostatusid,\n\tp.project_name AS projectname,\n\tp.start_date AS projectstartdate,\n\tp.status AS projectstatus,\n\tp.description AS projectdescription,\n\tp.is_yt_project AS iytproject,\n\tv.status AS videostatus, \n\tv.publish_date AS vodeopublishdate,\n\tv.youtube_video_id AS ytvideoid,\n\t(SELECT COUNT(1) FROM project_components pc WHERE pc.project_id = p.project_id) AS componentcount\nFROM public.projects p\nLEFT\nJOIN video v ON v.projects_id = p.project_id\nLEFT\nJOIN videostatus vs ON vs.video_id = v.video_id ",
+      "body": "SELECT \n\tp.project_id AS projectid,\n\tv.video_id AS videoid,\n\tv.script AS videocontent,\n\tvs.status_id AS videostatusid,\n\tp.project_name AS projectname,\n\tp.start_date AS projectstartdate,\n\tp.status AS projectstatus,\n\tp.description AS projectdescription,\n\tp.is_yt_project AS iytproject,\n\tv.status AS videostatus, \n\tv.publish_date AS vodeopublishdate,\n\tv.youtube_video_id AS ytvideoid,\n\t(SELECT SUM(quantity_used) FROM project_components pc WHERE pc.project_id = p.project_id) AS componentcount\nFROM public.projects p\nLEFT\nJOIN video v ON v.projects_id = p.project_id\nLEFT\nJOIN videostatus vs ON vs.video_id = v.video_id ",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

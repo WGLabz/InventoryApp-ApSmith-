@@ -11,7 +11,7 @@ SELECT
 	v.status AS videostatus, 
 	v.publish_date AS vodeopublishdate,
 	v.youtube_video_id AS ytvideoid,
-	(SELECT COUNT(1) FROM project_components pc WHERE pc.project_id = p.project_id) AS componentcount
+	(SELECT SUM(quantity_used) FROM project_components pc WHERE pc.project_id = p.project_id) AS componentcount
 FROM public.projects p
 LEFT
 JOIN video v ON v.projects_id = p.project_id
