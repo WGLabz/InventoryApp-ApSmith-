@@ -57,6 +57,11 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 440,
   "isCanvas": true,
   "isLoading": false,
@@ -70,6 +75,7 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 21,
   "needsErrorInfo": false,
+  "onClose": "{{GetProjects.run()}}",
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,

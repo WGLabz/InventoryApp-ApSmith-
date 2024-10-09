@@ -108,7 +108,11 @@
       "key": "primaryColumns.videocontent.computedValue"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onPageChange"
@@ -139,7 +143,7 @@
   "needsErrorInfo": false,
   "onPageChange": "{{GetOrders.run()}}",
   "onPageSizeChange": "{{GetOrders.run();\nOrdersCount.run()}}",
-  "originalBottomRow": 108,
+  "originalBottomRow": 113,
   "originalTopRow": 4,
   "parentColumnSpace": 12.71875,
   "parentId": "0",
