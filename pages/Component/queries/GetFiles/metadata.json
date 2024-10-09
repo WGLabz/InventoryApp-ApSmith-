@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6703b251c982f54ff180d40c_f13fb055-ffea-40e4-827d-f25fbc061fdd",
-  "id": "Component_ComponentPurchaseHistory",
+  "gitSyncId": "6703b251c982f54ff180d40c_efd47363-0715-465c-bba7-2947d4a72771",
+  "id": "Component_GetFiles",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.order_parts p\nLEFT\nJOIN public.orders o ON o.order_id = p.order_id\nLEFT\nJOIN public.vendors v ON v.vendor_id = o.vendor_id\n\nWHERE component_id = {{ appsmith.URL.queryParams.component}}",
+      "body": "SELECT * FROM public.component_files\nWHERE component_id = {{appsmith.URL.queryParams.component }}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -28,7 +28,7 @@
       }
     ],
     "executeOnLoad": true,
-    "name": "ComponentPurchaseHistory",
+    "name": "GetFiles",
     "pageId": "Component",
     "userSetOnLoad": false
   }

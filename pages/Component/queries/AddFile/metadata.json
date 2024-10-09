@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6703b251c982f54ff180d40c_f13fb055-ffea-40e4-827d-f25fbc061fdd",
-  "id": "Component_ComponentPurchaseHistory",
+  "gitSyncId": "6703b251c982f54ff180d40c_a23596ce-d427-45d9-937b-dfa33799ac38",
+  "id": "Component_AddFile",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.order_parts p\nLEFT\nJOIN public.orders o ON o.order_id = p.order_id\nLEFT\nJOIN public.vendors v ON v.vendor_id = o.vendor_id\n\nWHERE component_id = {{ appsmith.URL.queryParams.component}}",
+      "body": "INSERT INTO public.component_files(\n\tcomponent_id, minio_file_name, minio_bucket, minio_file_type, upload_date, description)\n\tVALUES ({{ this.params.componentid}}, {{ this.params.filename }}, {{ this.params.bucket}}, {{ this.params.filetype }},{{ new Date() }}, {{ this.params.description }});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "ComponentPurchaseHistory",
+    "executeOnLoad": false,
+    "name": "AddFile",
     "pageId": "Component",
     "userSetOnLoad": false
   }

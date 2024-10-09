@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 198,
+  "bottomRow": 43,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 198,
-  "originalTopRow": 194,
+  "originalBottomRow": 43,
+  "originalTopRow": 39,
   "overflow": "NONE",
   "parentColumnSpace": 13.90625,
   "parentId": "0",
@@ -40,13 +40,13 @@
   "responsiveBehavior": "fill",
   "rightColumn": 27,
   "shouldTruncate": false,
-  "text": "Usage History",
+  "text": "About the component",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 194,
+  "topRow": 39,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "9xud1hhh0x",
-  "widgetName": "PurchaseCopy"
+  "widgetId": "bw9c9gh7eg",
+  "widgetName": "PurchaseCopy1Copy"
 }

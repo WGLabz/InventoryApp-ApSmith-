@@ -1,0 +1,5 @@
+SELECT p.is_yt_project,p.project_name ,p.status, pc.quantity_used, pc.date
+FROM public.project_components pc
+LEFT
+JOIN public.projects p ON p.project_id = pc.project_id
+WHERE component_id = {{ appsmith.URL.queryParams.component}}

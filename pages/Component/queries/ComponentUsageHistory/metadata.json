@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6703b251c982f54ff180d40c_f13fb055-ffea-40e4-827d-f25fbc061fdd",
-  "id": "Component_ComponentPurchaseHistory",
+  "gitSyncId": "6703b251c982f54ff180d40c_eced6826-59f4-4d90-a173-76070dbeee38",
+  "id": "Component_ComponentUsageHistory",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.order_parts p\nLEFT\nJOIN public.orders o ON o.order_id = p.order_id\nLEFT\nJOIN public.vendors v ON v.vendor_id = o.vendor_id\n\nWHERE component_id = {{ appsmith.URL.queryParams.component}}",
+      "body": "SELECT p.is_yt_project,p.project_name ,p.status, pc.quantity_used, pc.date\nFROM public.project_components pc\nLEFT\nJOIN public.projects p ON p.project_id = pc.project_id\nWHERE component_id = {{ appsmith.URL.queryParams.component}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -28,7 +28,7 @@
       }
     ],
     "executeOnLoad": true,
-    "name": "ComponentPurchaseHistory",
+    "name": "ComponentUsageHistory",
     "pageId": "Component",
     "userSetOnLoad": false
   }

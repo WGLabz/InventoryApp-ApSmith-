@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 43,
+  "boxShadow": "none",
+  "buttonColor": "#22c55e",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !appsmith.URL.queryParams.component }}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "b8pr5256tx",
+  "leftColumn": 55,
+  "minWidth": 120,
+  "mobileBottomRow": 77,
+  "mobileLeftColumn": 48,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 73,
+  "needsErrorInfo": false,
+  "onClick": "{{UpdateDescription.run({\n  content: RichTextEditor1.text\n}).then(() => {\n  GetComponent.run();\n  showAlert('Component description updated', 'success');\n}).catch(() => {\n  showAlert('Failed to update the component description', 'error');\n});}}",
+  "originalBottomRow": 43,
+  "originalTopRow": 39,
+  "parentColumnSpace": 13.90625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "Save",
+  "topRow": 39,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "pywngnflp8",
+  "widgetName": "Button2"
+}

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.project_components(\n\tproject_id, component_id, quantity_used)\n\tVALUES ({{ this.params.projectid}}, {{ this.params.componentid }}, {{ this.params.quantity}});",
+      "body": "INSERT INTO public.project_components(\n\tproject_id, component_id, quantity_used,date)\n\tVALUES ({{ this.params.projectid}}, {{ this.params.componentid }}, {{ this.params.quantity}},{{ new Date()}});",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

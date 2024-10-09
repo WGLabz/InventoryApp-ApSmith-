@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6703b251c982f54ff180d40c_f13fb055-ffea-40e4-827d-f25fbc061fdd",
-  "id": "Component_ComponentPurchaseHistory",
+  "gitSyncId": "6703b251c982f54ff180d40c_f9964937-0cd6-43d1-8874-bff40ef291d0",
+  "id": "Component_UpdateDescription",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.order_parts p\nLEFT\nJOIN public.orders o ON o.order_id = p.order_id\nLEFT\nJOIN public.vendors v ON v.vendor_id = o.vendor_id\n\nWHERE component_id = {{ appsmith.URL.queryParams.component}}",
+      "body": "UPDATE public.components\n\tSET description= {{ this.params.content}}\n\tWHERE component_id = {{ appsmith.URL.queryParams.component}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "ComponentPurchaseHistory",
+    "executeOnLoad": false,
+    "name": "UpdateDescription",
     "pageId": "Component",
     "userSetOnLoad": false
   }

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 198,
+  "bottomRow": 13,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,17 +11,20 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1rem",
+  "fontSize": "3rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
   "key": "u16uwmt7lk",
-  "leftColumn": 0,
+  "leftColumn": 25,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -30,23 +33,23 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 198,
-  "originalTopRow": 194,
+  "originalBottomRow": 4,
+  "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 13.90625,
-  "parentId": "0",
+  "parentId": "8tf0bcxhhd",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 27,
+  "rightColumn": 64,
   "shouldTruncate": false,
-  "text": "Usage History",
+  "text": "{{GetComponent.data[0].name}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 194,
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "9xud1hhh0x",
-  "widgetName": "PurchaseCopy"
+  "widgetId": "k7tlp7qac5",
+  "widgetName": "Text1"
 }
