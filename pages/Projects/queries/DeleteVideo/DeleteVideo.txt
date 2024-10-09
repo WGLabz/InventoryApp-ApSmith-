@@ -1,0 +1,2 @@
+DELETE FROM public.video
+	WHERE video_id = {{ this.params.id }};

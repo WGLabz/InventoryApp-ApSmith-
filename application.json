@@ -56,6 +56,10 @@
     {
       "id": "Component",
       "isDefault": false
+    },
+    {
+      "id": "Projects",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

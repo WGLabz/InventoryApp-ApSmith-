@@ -1,0 +1,42 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 17,
+  "boxShadow": "none",
+  "defaultSwitchState": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mbiy3w8gaq",
+  "label": "Youtube Video",
+  "labelPosition": "Right",
+  "leftColumn": 32,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 17,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 13,
+  "needsErrorInfo": false,
+  "originalBottomRow": 21,
+  "originalTopRow": 13,
+  "parentColumnSpace": 6.9375,
+  "parentId": "n9rzjbv9ub",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 60,
+  "topRow": 13,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "0k9sugz6h4",
+  "widgetName": "IsYoutubeVideo"
+}

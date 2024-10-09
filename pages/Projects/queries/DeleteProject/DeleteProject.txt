@@ -1,0 +1,2 @@
+DELETE FROM public.projects
+	WHERE  project_id = {{this.params.id}};

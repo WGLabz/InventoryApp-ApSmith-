@@ -1,0 +1,2 @@
+DELETE FROM public.videostatus
+	WHERE  status_id = {{ this.params.id}};

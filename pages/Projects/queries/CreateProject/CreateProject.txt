@@ -1,0 +1,5 @@
+-- INSERT INTO public.projects( project_name, start_date, status, description) VALUES (, ,'CREATED',) RETURNING project_id
+
+INSERT INTO public.projects(
+	 project_name, start_date, status, description, is_yt_project)
+VALUES ('{{ this.params.name }}','{{ this.params.date }}','CREATED',' {{ this.params.description }}', {{this.params.ytvideo}}) returning project_id AS id

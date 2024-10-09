@@ -1,0 +1,93 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 270,
+  "boxShadow": "none",
+  "canEscapeKeyClose": true,
+  "canOutsideClickClose": true,
+  "children": [
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 240,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": true,
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "flexLayers": [],
+      "isDisabled": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "qm57v1ftij",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 244,
+      "minWidth": 450,
+      "mobileBottomRow": 240,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 180.78125,
+      "mobileTopRow": 0,
+      "needsErrorInfo": false,
+      "parentColumnSpace": 1,
+      "parentId": "gvm1sdrm9n",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 180.78125,
+      "shouldScrollContents": false,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "n9rzjbv9ub",
+      "widgetName": "Canvas3"
+    }
+  ],
+  "detachFromLayout": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
+  "height": 240,
+  "isCanvas": true,
+  "isLoading": false,
+  "key": "8c4gmn2lt2",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 10,
+  "minHeight": 240,
+  "mobileBottomRow": 54,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 13,
+  "mobileTopRow": 30,
+  "needsErrorInfo": false,
+  "onClose": "{{resetWidget(\"New_Project\", true);\nGetProjects.run()}}",
+  "originalBottomRow": 270,
+  "originalTopRow": 30,
+  "parentColumnSpace": 13.90625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 13,
+  "shouldScrollContents": true,
+  "topRow": 30,
+  "type": "MODAL_WIDGET",
+  "version": 2,
+  "widgetId": "gvm1sdrm9n",
+  "widgetName": "New_Project",
+  "width": 456
+}

@@ -1,0 +1,61 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 22,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{ !ProjectName.text || !ProectDescription}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "rxor5psjw1",
+  "leftColumn": 50,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{Project.createProject();}}",
+  "originalBottomRow": 21,
+  "originalTopRow": 17,
+  "parentId": "n9rzjbv9ub",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "Create",
+  "topRow": 18,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "18u4l39ch1",
+  "widgetName": "Button8"
+}

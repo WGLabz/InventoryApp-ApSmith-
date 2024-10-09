@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconAlign": "left",
+  "iconName": "add",
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "lgh8xe3byy",
+  "leftColumn": 54,
+  "minWidth": 120,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 33,
+  "mobileRightColumn": 49,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onClick": "{{showModal(New_Project.name);}}",
+  "parentColumnSpace": 13.90625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "New Project",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "nmjpjv23j8",
+  "widgetName": "Button14Copy"
+}
