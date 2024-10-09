@@ -60,6 +60,10 @@
     {
       "id": "Projects",
       "isDefault": false
+    },
+    {
+      "id": "Box",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

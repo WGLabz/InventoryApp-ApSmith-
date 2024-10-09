@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 101,
+  "bottomRow": 4,
   "boxShadow": "none",
   "buttonColor": "#22c55e",
   "buttonVariant": "PRIMARY",
@@ -9,14 +9,6 @@
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "isDisabled"
-    }
-  ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "isDisabled"
     }
   ],
   "dynamicTriggerPathList": [
@@ -27,20 +19,18 @@
   "iconAlign": "left",
   "iconName": "add",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ !appsmith.URL.queryParams.component }}",
+  "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "key": "b8pr5256tx",
-  "leftColumn": 56,
+  "leftColumn": 0,
   "minWidth": 120,
-  "mobileBottomRow": 77,
-  "mobileLeftColumn": 48,
-  "mobileRightColumn": 64,
-  "mobileTopRow": 73,
+  "mobileBottomRow": 5,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Files_Upload.name).then(() => {}).catch(() => {});}}",
-  "originalBottomRow": 101,
-  "originalTopRow": 97,
+  "onClick": "{{NextBoxID.run().then(() => {\n  showModal(Add_New_Box.name);\n}).catch(() => {\n  ContainerScripts.SetAutogenLabel();\n});}}",
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -49,11 +39,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 64,
-  "text": "Upload File",
-  "topRow": 97,
+  "rightColumn": 8,
+  "text": "Add",
+  "topRow": 0,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "jzl9i9tqu4",
-  "widgetName": "Button2Copy"
+  "widgetId": "11wowtjbh2",
+  "widgetName": "Button4Copy1"
 }

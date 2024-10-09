@@ -1,11 +1,15 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 4,
   "boxShadow": "none",
-  "buttonColor": "#ef4444",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
     {
       "key": "borderRadius"
     },
@@ -23,28 +27,34 @@
       "key": "onClick"
     }
   ],
-  "iconName": "remove",
+  "iconAlign": "left",
+  "iconName": "edit",
+  "isDefaultClickDisabled": true,
   "isDisabled": "{{ !!!Table1.selectedRow.box_id}}",
   "isLoading": false,
   "isVisible": true,
-  "key": "59zqpx6oin",
-  "leftColumn": 5,
-  "minWidth": 50,
+  "key": "b8pr5256tx",
+  "leftColumn": 8,
+  "minWidth": 120,
   "mobileBottomRow": 5,
-  "mobileLeftColumn": 2,
-  "mobileRightColumn": 6,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 32,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{ContainerScripts.RemoveContainer();}}",
-  "parentColumnSpace": 11.59375,
+  "onClick": "{{showModal(Update_Box.name);}}",
+  "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
   "renderMode": "CANVAS",
+  "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 9,
-  "topRow": 1,
-  "type": "ICON_BUTTON_WIDGET",
+  "rightColumn": 17,
+  "text": "Update",
+  "topRow": 0,
+  "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "1dz0ejo603",
-  "widgetName": "RemoveButton"
+  "widgetId": "chbcnbvnox",
+  "widgetName": "Button4"
 }

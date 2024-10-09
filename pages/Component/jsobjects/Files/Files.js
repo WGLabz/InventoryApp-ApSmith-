@@ -11,7 +11,8 @@ export default {
 			let fileType =file.type;
 			await SaveFileToMinIO.run({
 				filename: fileName,
-				content: file
+				content: file,
+				componentid: componentID
 			});
 			await AddFile.run({
 				componentid:componentID,
@@ -26,7 +27,7 @@ export default {
 	async downloadLink(row){
 		let file = await GetFileFromMinIO.run({
 			bucket: row.minio_bucket,
-			path: "componentfiles/"+row.minio_file_name
+			path: "componentfiles/"+row.component_id+'/'+row.minio_file_name
 		});
 		return {content:"data:"+row.minio_file_type+";base64,"+file.fileData,name: row.minio_file_name};
 	}

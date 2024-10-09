@@ -57,7 +57,7 @@
           }
         },
         "path": {
-          "data": "componentfiles/{{this.params.filename}}"
+          "data": "componentfiles/{{this.params.componentid}}/{{this.params.filename}}"
         },
         "read": {
           "dataType": {

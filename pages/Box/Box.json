@@ -1,23 +1,23 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_e9d5d201-9a88-4f4d-865d-da6987b8ae61",
+  "gitSyncId": "6703b251c982f54ff180d40c_c1785ca2-41cf-427b-99fc-94b626368c06",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 720,
+          "bottomRow": 1520,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 500,
+          "minHeight": 570,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 48,
+          "snapRows": 55,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 90,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "Storage Box",
-    "slug": "storage-box"
+    "name": "Box",
+    "slug": "box"
   }
 }

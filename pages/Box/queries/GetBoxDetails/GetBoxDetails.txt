@@ -1,0 +1,1 @@
+SELECT * FROM boxes where box_id = {{ appsmith.URL.queryParams.id}}
