@@ -36,14 +36,14 @@
     "component_id",
     "minio_file_name",
     "minio_bucket",
+    "description",
     "upload_date",
-    "customColumn1",
-    "description"
+    "customColumn1"
   ],
-  "columnUpdatedAt": 1728477460723,
+  "columnUpdatedAt": 1728494167946,
   "columnWidthMap": {
     "description": 155,
-    "minio_file_name": 519,
+    "minio_file_name": 262,
     "minio_file_type": 60,
     "upload_date": 249
   },
@@ -201,7 +201,7 @@
     },
     "description": {
       "alias": "description",
-      "allowCellWrapping": false,
+      "allowCellWrapping": true,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
@@ -374,7 +374,7 @@
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "text",
+      "columnType": "date",
       "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"upload_date\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
@@ -395,6 +395,7 @@
       "label": "UPLOAD DATE",
       "notation": "standard",
       "originalId": "upload_date",
+      "outputFormat": "DD-MM-YYYY",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
