@@ -1,0 +1,3 @@
+UPDATE public.video
+	SET script= {{ RichTextEditor1CopyCopy.text}}
+	WHERE projects_id = {{ appsmith.URL.queryParams.id}}

@@ -1,2 +1,2 @@
-DELETE FROM public.component_files
+DELETE FROM public.project_files
 	WHERE file_id = {{ FilesTable.selectedRow.file_id}}

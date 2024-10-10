@@ -1,2 +1,2 @@
-SELECT * FROM public.component_files
-WHERE component_id = {{appsmith.URL.queryParams.component }}
+SELECT * FROM public.project_files
+WHERE project_id = {{appsmith.URL.queryParams.id }}

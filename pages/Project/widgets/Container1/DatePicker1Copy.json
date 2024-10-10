@@ -1,0 +1,66 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "DD-MM-YYYY",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{GetProject.data[0].publish_date}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "firstDayOfWeek": 0,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "7bpzvez85n",
+  "label": "Publish Date: ",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelTextSize": "0.875rem",
+  "labelWidth": "7",
+  "leftColumn": 46,
+  "maxDate": "2121-12-31T18:29:00.000Z",
+  "maxDynamicHeight": 9000,
+  "minDate": "1920-12-31T18:30:00.000Z",
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 17,
+  "mobileRightColumn": 37,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "originalBottomRow": 21,
+  "originalTopRow": 17,
+  "parentColumnSpace": 13.59375,
+  "parentId": "8tf0bcxhhd",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shortcuts": false,
+  "timePrecision": "minute",
+  "topRow": 17,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "hijwbpaqjn",
+  "widgetName": "DatePicker1Copy"
+}

@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 74,
+  "bottomRow": 178,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "{{ GetProject.data[0].projectdescription}}",
+  "defaultText": "{{ GetProject.data[0].videoscript}}",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -13,9 +13,17 @@
     },
     {
       "key": "defaultText"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "inputType": "markdown",
@@ -24,7 +32,7 @@
   "isLoading": false,
   "isRequired": false,
   "isToolbarHidden": false,
-  "isVisible": true,
+  "isVisible": "{{ GetProject.data[0].isytvideo}}",
   "key": "e8wbr6y13q",
   "labelAlignment": "left",
   "labelPosition": "Top",
@@ -39,17 +47,17 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 27,
   "needsErrorInfo": false,
-  "originalBottomRow": 74,
-  "originalTopRow": 35,
+  "originalBottomRow": 178,
+  "originalTopRow": 132,
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "topRow": 35,
+  "topRow": 132,
   "type": "RICH_TEXT_EDITOR_WIDGET",
   "version": 1,
-  "widgetId": "kjjt2zqqe3",
-  "widgetName": "RichTextEditor1"
+  "widgetId": "6bpdp2fyox",
+  "widgetName": "RichTextEditor1CopyCopy"
 }

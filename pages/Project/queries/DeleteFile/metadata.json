@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6703b251c982f54ff180d40c_51c25d30-4b72-4fcf-a9dd-1fc1cf7371c5",
+  "gitSyncId": "6703b251c982f54ff180d40c_4a3f0313-65ef-4a6d-a051-9a097dcfc50c",
   "id": "Project_DeleteFile",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM public.component_files\n\tWHERE file_id = {{ FilesTable.selectedRow.file_id}}",
+      "body": "DELETE FROM public.project_files\n\tWHERE file_id = {{ FilesTable.selectedRow.file_id}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

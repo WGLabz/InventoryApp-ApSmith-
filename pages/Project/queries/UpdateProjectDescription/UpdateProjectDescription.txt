@@ -1,0 +1,3 @@
+UPDATE public.projects
+	SET description= {{ this.params.content}}
+	WHERE project_id = {{ appsmith.URL.queryParams.id}}

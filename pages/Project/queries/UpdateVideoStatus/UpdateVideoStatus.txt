@@ -1,0 +1,3 @@
+UPDATE public.videostatus
+	SET status={{VideoStatus.selectedOptionValue}}, date_changed={{ new Date() }}
+	WHERE status_id = {{GetProject.data[0].videostatusid}};;

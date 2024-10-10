@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 123,
+  "bottomRow": 213,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -33,14 +33,14 @@
   "columnOrder": [
     "minio_file_type",
     "file_id",
-    "component_id",
     "minio_file_name",
     "minio_bucket",
     "description",
-    "upload_date",
-    "customColumn1"
+    "customColumn1",
+    "project_id",
+    "uploaded_at"
   ],
-  "columnUpdatedAt": 1728494167946,
+  "columnUpdatedAt": 1728559618798,
   "columnWidthMap": {
     "customColumn1": 62,
     "description": 425,
@@ -71,9 +71,6 @@
       "key": "primaryColumns.file_id.computedValue"
     },
     {
-      "key": "primaryColumns.component_id.computedValue"
-    },
-    {
       "key": "primaryColumns.minio_file_name.computedValue"
     },
     {
@@ -83,13 +80,16 @@
       "key": "primaryColumns.minio_file_type.computedValue"
     },
     {
-      "key": "primaryColumns.upload_date.computedValue"
-    },
-    {
       "key": "primaryColumns.description.computedValue"
     },
     {
       "key": "primaryColumns.customColumn1.computedValue"
+    },
+    {
+      "key": "primaryColumns.project_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.uploaded_at.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -122,46 +122,12 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 104,
   "needsErrorInfo": false,
-  "originalBottomRow": 123,
-  "originalTopRow": 92,
+  "originalBottomRow": 213,
+  "originalTopRow": 182,
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumns": {
-    "component_id": {
-      "alias": "component_id",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{FilesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"component_id\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "component_id",
-      "index": 1,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "component_id",
-      "notation": "standard",
-      "originalId": "component_id",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "customColumn1": {
       "alias": "-",
       "allowCellWrapping": false,
@@ -370,20 +336,54 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "upload_date": {
-      "alias": "upload_date",
+    "project_id": {
+      "alias": "project_id",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "date",
-      "computedValue": "{{FilesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"upload_date\"]))}}",
+      "columnType": "number",
+      "computedValue": "{{FilesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"project_id\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "upload_date",
+      "id": "project_id",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "project_id",
+      "notation": "standard",
+      "originalId": "project_id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "uploaded_at": {
+      "alias": "uploaded_at",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{FilesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"uploaded_at\"]))}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "uploaded_at",
       "index": 5,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -392,11 +392,10 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
-      "label": "UPLOAD DATE",
+      "isVisible": false,
+      "label": "uploaded_at",
       "notation": "standard",
-      "originalId": "upload_date",
-      "outputFormat": "DD-MM-YYYY",
+      "originalId": "uploaded_at",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -412,7 +411,7 @@
   "searchKey": "",
   "tableData": "{{GetFiles.data}}",
   "textSize": "0.875rem",
-  "topRow": 92,
+  "topRow": 182,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,

@@ -1,3 +1,0 @@
-UPDATE public.components
-	SET description= {{ this.params.content}}
-	WHERE component_id = {{ appsmith.URL.queryParams.component}}

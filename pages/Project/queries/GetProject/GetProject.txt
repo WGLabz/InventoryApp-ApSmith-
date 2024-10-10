@@ -1,0 +1,23 @@
+SELECT 
+	p.project_id AS projectid,
+	p.project_name AS name,
+	p.start_date AS proectstartdate,
+	p.status as projectstatus,
+	p.description AS projectdescription,
+	p.is_yt_project AS isytvideo,
+	p.git_repository as projectrepo,
+	v.video_id AS videoid,
+	v.script as videoscript,
+	v.description as videodetails,
+	v.status as videostatus,
+	v.publish_date as videopublishdate,
+	v.youtube_video_id as ytvideoid,
+	s.status_id AS videostatusid,
+	s.date_changed as videostatusupdatedon,
+	(SELECT SUM(quantity_used) FROM public.project_components c WHERE c.project_id = p.project_id) AS components
+FROM projects p
+LEFT 
+JOIN video v ON v.projects_id = p.project_id
+LEFT
+JOIN videostatus s ON s.video_id = v.video_id
+WHERE p.project_id = {{ appsmith.URL.queryParams.id}}

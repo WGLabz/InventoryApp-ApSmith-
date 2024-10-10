@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "6703b251c982f54ff180d40c_82678c4c-06a9-400d-9961-b8d32c79f85b",
-  "id": "Project_AddFile",
+  "gitSyncId": "6703b251c982f54ff180d40c_14abb85a-34fe-4c86-9064-2d6a4951e714",
+  "id": "Project_UpdateVideoStatus",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.project_files(project_id, minio_file_name, minio_bucket,minio_file_type, description)\nVALUES ({{ this.params.projectid}}, '{{ this.params.filename }}', '{{ this.params.bucket}}', '{{ this.params.filetype }}', '{{ this.params.description }}');",
+      "body": "UPDATE public.videostatus\n\tSET status={{VideoStatus.selectedOptionValue}}, date_changed={{ new Date() }}\n\tWHERE status_id = {{GetProject.data[0].videostatusid}};;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
       "timeoutInMillisecond": 10000
@@ -28,7 +28,7 @@
       }
     ],
     "executeOnLoad": false,
-    "name": "AddFile",
+    "name": "UpdateVideoStatus",
     "pageId": "Project",
     "userSetOnLoad": false
   }

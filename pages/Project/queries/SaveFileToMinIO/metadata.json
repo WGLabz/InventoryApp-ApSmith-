@@ -1,5 +1,5 @@
 {
-  "gitSyncId": "6703b251c982f54ff180d40c_01722352-0262-41ab-bd06-ccb1050ec703",
+  "gitSyncId": "6703b251c982f54ff180d40c_8e043394-7766-45ec-a422-939052e36b08",
   "id": "Project_SaveFileToMinIO",
   "pluginId": "amazons3-plugin",
   "pluginType": "DB",
@@ -57,7 +57,7 @@
           }
         },
         "path": {
-          "data": "componentfiles/{{this.params.componentid}}/{{this.params.filename}}"
+          "data": "projectfiles/{{this.params.projectid}}/{{this.params.filename}}"
         },
         "read": {
           "dataType": {

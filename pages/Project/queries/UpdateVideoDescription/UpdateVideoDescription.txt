@@ -1,0 +1,3 @@
+UPDATE public.video
+	SET description = {{RichTextEditor1Copy.text}}
+	WHERE video_id = {{GetProject.data[0].videoid}};

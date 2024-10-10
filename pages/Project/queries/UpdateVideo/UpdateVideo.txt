@@ -1,0 +1,3 @@
+UPDATE public.video
+	SET status= {{VideoStatus.selectedOptionValue}}, publish_date= {{new Date(DatePicker1Copy.selectedDate)}},youtube_video_id={{ Input1.text}}
+	WHERE video_id = {{GetProject.data[0].videoid}};
