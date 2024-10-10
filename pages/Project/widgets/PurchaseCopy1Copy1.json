@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 33,
+  "bottomRow": 217,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -30,8 +30,8 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "originalBottomRow": 39,
-  "originalTopRow": 35,
+  "originalBottomRow": 223,
+  "originalTopRow": 219,
   "overflow": "NONE",
   "parentColumnSpace": 13.90625,
   "parentId": "0",
@@ -40,13 +40,13 @@
   "responsiveBehavior": "fill",
   "rightColumn": 27,
   "shouldTruncate": false,
-  "text": "About the project",
+  "text": "Latest commits to the project",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 29,
+  "topRow": 213,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "bw9c9gh7eg",
-  "widgetName": "PurchaseCopy1Copy"
+  "widgetId": "mg6259igcy",
+  "widgetName": "PurchaseCopy1Copy1"
 }
