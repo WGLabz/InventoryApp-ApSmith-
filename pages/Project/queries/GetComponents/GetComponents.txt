@@ -1,0 +1,4 @@
+SELECT c.name,c.description, c.component_id,c.image_content,c.image_type,pc.quantity_used FROM project_components pc
+LEFT 
+JOIN components c ON pc.component_id = c.component_id
+WHERE pc.project_id = {{ appsmith.URL.queryParams.id }}

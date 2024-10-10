@@ -45,7 +45,7 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 13,
   "needsErrorInfo": false,
-  "onTextChanged": "{{Git.getCommits();}}",
+  "onTextChanged": "",
   "originalBottomRow": 15,
   "originalTopRow": 11,
   "parentColumnSpace": 13.59375,

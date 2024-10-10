@@ -1,0 +1,2 @@
+DELETE FROM project_components pc
+WHERE pc.project_id = {{ appsmith.URL.queryParams.id }} AND component_id = {{ this.params.componentid}}
