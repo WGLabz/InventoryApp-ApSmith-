@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "6703b251c982f54ff180d40c_5bc5a349-0cac-4afe-a51d-406c85d4f17e",
+  "id": "Project_ProjectComponentCart",
+  "unpublishedCollection": {
+    "name": "ProjectComponentCart",
+    "pageId": "Project",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "cart",
+        "value": "[]"
+      }
+    ]
+  }
+}
