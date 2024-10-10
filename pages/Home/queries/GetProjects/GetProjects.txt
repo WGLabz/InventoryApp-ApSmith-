@@ -1,0 +1,19 @@
+SELECT 
+	p.project_id AS projectid,
+	v.video_id AS videoid,
+	v.script AS videocontent,
+	vs.status_id AS videostatusid,
+	p.project_name AS projectname,
+	p.start_date AS projectstartdate,
+	p.status AS projectstatus,
+	p.description AS projectdescription,
+	p.is_yt_project AS iytproject,
+	v.status AS videostatus, 
+	v.publish_date AS vodeopublishdate,
+	v.youtube_video_id AS ytvideoid,
+	(SELECT SUM(quantity_used) FROM project_components pc WHERE pc.project_id = p.project_id) AS componentcount
+FROM public.projects p
+LEFT
+JOIN video v ON v.projects_id = p.project_id
+LEFT
+JOIN videostatus vs ON vs.video_id = v.video_id 

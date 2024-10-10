@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_ce03f560-abb1-42dc-b713-d4e6a038b250",
-  "id": "Home_JSObject1.myFun1",
+  "gitSyncId": "6703b251c982f54ff180d40c_661cb01c-8be7-4263-b296-7992d1eaf923",
+  "id": "Home_JSObject1.init",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -10,7 +10,6 @@
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
-    "clientSideExecution": true,
     "collectionId": "Home_JSObject1",
     "confirmBeforeExecute": false,
     "datasource": {
@@ -24,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "JSObject1.myFun1",
-    "name": "myFun1",
+    "fullyQualifiedName": "JSObject1.init",
+    "name": "init",
     "pageId": "Home",
     "userSetOnLoad": false
   }
