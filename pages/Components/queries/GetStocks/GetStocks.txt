@@ -9,10 +9,10 @@ c.category_id,
 b.box_label,
 ct.category_name,
 b.box_id,
-( SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id) AS purchased,
+COALESCE(( SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id),0) AS purchased,
 COALESCE((SELECT SUM(quantity_used) FROM project_components WHERE component_id = c.component_id) , 0) AS used,
-(( SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id) -
-COALESCE((SELECT SUM(quantity_used) FROM project_components WHERE component_id = c.component_id) , 0) ) AS stock
+COALESCE((( SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id) -
+COALESCE((SELECT SUM(quantity_used) FROM project_components WHERE component_id = c.component_id) , 0) ),0) AS stock
 FROM components c
 LEFT 
 JOIN boxes b ON b.box_id = c.box_id
