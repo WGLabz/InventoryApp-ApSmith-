@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "WITH ordered_used_cte AS (\n\tSELECT \n\tc.component_id,\n\tc.name,\n\tCOALESCE((SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id),0) AS ordered,\n\tCOALESCE((SELECT SUM(quantity_used) FROM project_components WHERE component_id = c.component_id),0) AS used,\n\tCOALESCE((SELECT SUM(unit_cost) FROM order_parts WHERE component_id = c.component_id),0) AS unit_cost_sum,\n\tCOALESCE((SELECT COUNT(1) FROM order_parts WHERE component_id = c.component_id),0) AS order_count\n\tFROM components c\n)\nSELECT \n   SUM(ordered - used) as total_stock,\n   SUM((unit_cost_sum / order_count ) * (ordered-used)) as total_value\nFROM \n    ordered_used_cte;",
+      "body": "WITH ordered_used_cte AS (\n    SELECT \n        c.component_id,\n        c.name,\n        COALESCE((SELECT SUM(quantity_ordered) FROM order_parts WHERE component_id = c.component_id), 0) AS ordered,\n        COALESCE((SELECT SUM(quantity_used) FROM project_components WHERE component_id = c.component_id), 0) AS used,\n        COALESCE((SELECT SUM(unit_cost) FROM order_parts WHERE component_id = c.component_id), 0) AS unit_cost_sum,\n        COALESCE((SELECT COUNT(1) FROM order_parts WHERE component_id = c.component_id), 0) AS order_count\n    FROM components c\n)\nSELECT \n   SUM(ordered - used) AS total_stock,\n   SUM((unit_cost_sum / NULLIF(order_count, 0)) * (ordered - used)) AS total_value\nFROM \n    ordered_used_cte;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
