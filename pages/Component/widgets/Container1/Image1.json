@@ -28,7 +28,7 @@
   "mobileRightColumn": 12,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "objectFit": "auto",
+  "objectFit": "contain",
   "originalBottomRow": 33,
   "originalTopRow": 16,
   "parentColumnSpace": 13.90625,

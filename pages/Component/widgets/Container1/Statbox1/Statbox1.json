@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 43,
+  "bottomRow": 26,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -82,7 +82,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 35,
   "shouldScrollContents": true,
-  "topRow": 33,
+  "topRow": 16,
   "type": "STATBOX_WIDGET",
   "widgetId": "fu94arlgsb",
   "widgetName": "Statbox1"
