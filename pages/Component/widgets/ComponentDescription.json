@@ -1,9 +1,9 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 97,
+  "bottomRow": 114,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultText": "{{ GetComponent.data[0].description}}",
+  "defaultText": "{{ AI.description }}",
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
@@ -16,7 +16,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChange"
+    }
+  ],
   "flexVerticalAlignment": "start",
   "inputType": "markdown",
   "isDefaultClickDisabled": true,
@@ -39,17 +43,18 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 27,
   "needsErrorInfo": false,
-  "originalBottomRow": 97,
-  "originalTopRow": 42,
+  "onTextChange": "",
+  "originalBottomRow": 114,
+  "originalTopRow": 53,
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "topRow": 42,
+  "topRow": 53,
   "type": "RICH_TEXT_EDITOR_WIDGET",
   "version": 1,
   "widgetId": "kjjt2zqqe3",
-  "widgetName": "RichTextEditor1"
+  "widgetName": "ComponentDescription"
 }

@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "6703b251c982f54ff180d40c_07e46c7e-b10d-4100-a2f4-09f4d84f98b3",
+  "id": "Component_AI",
+  "unpublishedCollection": {
+    "name": "AI",
+    "pageId": "Component",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "description",
+        "value": "GetComponent.data[0].description"
+      }
+    ]
+  }
+}

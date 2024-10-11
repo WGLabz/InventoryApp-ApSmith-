@@ -1,9 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 118,
+  "bottomRow": 76,
+  "bottomRowBeforeCollapse": 130,
   "boxShadow": "none",
-  "buttonColor": "#e15615",
+  "buttonColor": "#22c55e",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
@@ -12,11 +13,17 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [
@@ -25,22 +32,22 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "cross",
+  "iconName": "annotation",
   "isDefaultClickDisabled": true,
-  "isDisabled": "{{ !FilesTable.selectedRow.file_id }}",
+  "isDisabled": "{{ !appsmith.URL.queryParams.id }}",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ GetProject.data[0].isytvideo }}",
   "key": "b8pr5256tx",
-  "leftColumn": 46,
+  "leftColumn": 44,
   "minWidth": 120,
   "mobileBottomRow": 77,
   "mobileLeftColumn": 48,
   "mobileRightColumn": 64,
   "mobileTopRow": 73,
   "needsErrorInfo": false,
-  "onClick": "{{DeleteFile.run().then(() => {\n  showAlert('File removed sucessfully', 'success');\n  GetFiles.run();\n}).catch(() => {\n  showAlert('Failed to remove file.', 'error');\n});}}",
-  "originalBottomRow": 118,
-  "originalTopRow": 114,
+  "onClick": "{{AI.generateDescription();}}",
+  "originalBottomRow": 73,
+  "originalTopRow": 69,
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -49,11 +56,12 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 55,
-  "text": "Delete",
-  "topRow": 114,
+  "rightColumn": 57,
+  "text": "AI Generate",
+  "topRow": 72,
+  "topRowBeforeCollapse": 126,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "7idlta2s6m",
-  "widgetName": "FileRemoveButton"
+  "widgetId": "jj7p4pcptm",
+  "widgetName": "Button2CopyCopyCopy1"
 }

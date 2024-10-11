@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6703b251c982f54ff180d40c_2b8d9ef6-0466-428c-bbb7-ccf045af9974",
+  "id": "Project_AI",
+  "unpublishedCollection": {
+    "name": "AI",
+    "pageId": "Project",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "description",
+        "value": "GetProject.data[0].videodetails"
+      },
+      {
+        "name": "script",
+        "value": "GetProject.data[0].videoscript"
+      }
+    ]
+  }
+}

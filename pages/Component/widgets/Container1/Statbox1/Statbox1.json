@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 32,
+  "bottomRow": 43,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -72,8 +72,8 @@
   "mobileRightColumn": 55,
   "mobileTopRow": 13,
   "needsErrorInfo": false,
-  "originalBottomRow": 32,
-  "originalTopRow": 22,
+  "originalBottomRow": 43,
+  "originalTopRow": 33,
   "parentColumnSpace": 13.90625,
   "parentId": "8tf0bcxhhd",
   "parentRowSpace": 10,
@@ -82,7 +82,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 35,
   "shouldScrollContents": true,
-  "topRow": 22,
+  "topRow": 33,
   "type": "STATBOX_WIDGET",
   "widgetId": "fu94arlgsb",
   "widgetName": "Statbox1"
