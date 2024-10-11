@@ -38,18 +38,18 @@
   "originalBottomRow": 4,
   "originalTopRow": 0,
   "overflow": "NONE",
-  "parentId": "g93mkan2qd",
+  "parentId": "ulwszq821p",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 37,
   "shouldTruncate": false,
-  "text": "Dstinct Components",
+  "text": "Videos",
   "textAlign": "LEFT",
   "textColor": "#999999",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "a1uxhmlz9j",
-  "widgetName": "Text1"
+  "widgetId": "igtaxlr888",
+  "widgetName": "Text1Copy4Copy"
 }

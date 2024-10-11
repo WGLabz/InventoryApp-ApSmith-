@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,12 +11,15 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.875rem",
+  "fontSize": "1.25rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -25,26 +28,26 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 12,
+  "mobileBottomRow": 8,
   "mobileLeftColumn": 1,
   "mobileRightColumn": 37,
-  "mobileTopRow": 8,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "originalBottomRow": 13,
-  "originalTopRow": 8,
+  "originalBottomRow": 10,
+  "originalTopRow": 4,
   "overflow": "NONE",
-  "parentId": "g93mkan2qd",
+  "parentId": "siprev8uak",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 37,
   "shouldTruncate": false,
-  "text": "Distinct components",
+  "text": "{{ GetCurrentStockCountAndValue.data[0].total_stock}}",
   "textAlign": "LEFT",
-  "textColor": "#03B365",
-  "topRow": 8,
+  "textColor": "#231F20",
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "w6s7b1nrxg",
-  "widgetName": "Text3"
+  "widgetId": "2tfeqm9vkg",
+  "widgetName": "Text2Copy"
 }
