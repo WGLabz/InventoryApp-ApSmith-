@@ -3,10 +3,13 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 20,
   "boxShadow": "none",
-  "buttonColor": "#e15615",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
     {
       "key": "borderRadius"
     },
@@ -25,20 +28,20 @@
     }
   ],
   "iconAlign": "left",
-  "iconName": "cross",
+  "iconName": "edit",
   "isDefaultClickDisabled": true,
   "isDisabled": "{{!ComponentsTable.selectedRow.name}}",
   "isLoading": false,
   "isVisible": true,
   "key": "kimfmqnusp",
-  "leftColumn": 17,
+  "leftColumn": 26,
   "minWidth": 120,
-  "mobileBottomRow": 21,
-  "mobileLeftColumn": 20,
-  "mobileRightColumn": 36,
-  "mobileTopRow": 17,
+  "mobileBottomRow": 20,
+  "mobileLeftColumn": 28,
+  "mobileRightColumn": 44,
+  "mobileTopRow": 16,
   "needsErrorInfo": false,
-  "onClick": "{{RemoveComponent.run().then(() => {\n  GetStocks.run();\n  GetComponentsCount.run();\n  showAlert('Component removed', 'success');\n}).catch(() => {\n  showAlert('Failed to remove the component', 'error');\n});}}",
+  "onClick": "{{showModal(EditComponent.name).then(() => {});}}",
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -47,11 +50,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 26,
-  "text": "Remove",
+  "rightColumn": 35,
+  "text": "Edit",
   "topRow": 16,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "4nmu8u3fv5",
-  "widgetName": "Button5"
+  "widgetId": "zetsqkqncw",
+  "widgetName": "Button6Copy"
 }

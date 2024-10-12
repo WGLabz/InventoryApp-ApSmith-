@@ -14,5 +14,5 @@ INSERT INTO public.components(
 		{{ StorageContainerCopy.selectedOptionValue}}, 
 		'{{ComponentDescriptionCopy.text}}', 
 		CURRENT_DATE, 
-		DECODE('{{ Table1.selectedRow.image_content.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '')}}','base64'),
-		'{{Table1.selectedRow.image_type}}');
+		DECODE('{{ ComponentsTable.selectedRow.image_content.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '')}}','base64'),
+		'{{ComponentsTable.selectedRow.image_type}}');

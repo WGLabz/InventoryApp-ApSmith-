@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.components(\n\tname, \n\timaeg_name,\n\tcategory_id,\n\tbox_id, \n\tdescription, \n\tdate_added,\n\timage_content, \n\timage_type)\n\tVALUES ( \n\t\t'{{ ComponentNameCopy.text}}', \n\t\t'copiedimage.jpg', \n\t\t{{ ComponentCategoryCopy.selectedOptionValue}}, \n\t\t{{ StorageContainerCopy.selectedOptionValue}}, \n\t\t'{{ComponentDescriptionCopy.text}}', \n\t\tCURRENT_DATE, \n\t\tDECODE('{{ Table1.selectedRow.image_content.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '')}}','base64'),\n\t\t'{{Table1.selectedRow.image_type}}');",
+      "body": "INSERT INTO public.components(\n\tname, \n\timaeg_name,\n\tcategory_id,\n\tbox_id, \n\tdescription, \n\tdate_added,\n\timage_content, \n\timage_type)\n\tVALUES ( \n\t\t'{{ ComponentNameCopy.text}}', \n\t\t'copiedimage.jpg', \n\t\t{{ ComponentCategoryCopy.selectedOptionValue}}, \n\t\t{{ StorageContainerCopy.selectedOptionValue}}, \n\t\t'{{ComponentDescriptionCopy.text}}', \n\t\tCURRENT_DATE, \n\t\tDECODE('{{ ComponentsTable.selectedRow.image_content.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '')}}','base64'),\n\t\t'{{ComponentsTable.selectedRow.image_type}}');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

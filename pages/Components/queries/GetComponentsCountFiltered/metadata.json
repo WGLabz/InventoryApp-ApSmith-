@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT count(1)\nFROM components c\nWHERE c.name LIKE '%{{Table1.searchText}}%'",
+      "body": "SELECT count(1)\nFROM components c\nWHERE c.name LIKE '%{{ComponentsTable.searchText}}%'",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

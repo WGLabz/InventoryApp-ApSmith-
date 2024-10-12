@@ -1,0 +1,10 @@
+UPDATE 
+	public.components
+SET 
+	category_id={{ComponentCategoryCopy1.selectedOptionValue}}, 
+	box_id={{CmponentStorageContainerUpdate.selectedOptionValue}}, 
+	description='{{ComponentDescriptionUpdated.text}}',
+	image_content= DECODE('{{ComponentImagePickerCopy.files.length > 0 ? ComponentImagePickerCopy.files[0].data.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '') : ComponentsTable.selectedRow.image_content.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '') }}','base64'),
+	image_type= '{{ComponentImagePickerCopy.files.length > 0 ? ComponentImagePickerCopy.files[0].type.split("/").pop() : ComponentsTable.selectedRow.image_type}}'
+WHERE
+	component_id = {{ComponentsTable.selectedRow.component_id}}
