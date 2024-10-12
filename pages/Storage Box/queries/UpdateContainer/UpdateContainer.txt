@@ -1,1 +1,1 @@
-UPDATE public.boxes SET box_label = {{ UpdateContainerLabel.text }} WHERE box_id = {{ Table1.selectedRow.box_id}}
+UPDATE public.boxes SET box_label = {{ UpdateContainerLabel.text }}, box_qr_content = DECODE('{{Image1.image.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '')}}','base64') WHERE box_id = {{ Table1.selectedRow.box_id}}

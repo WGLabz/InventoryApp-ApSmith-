@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 25,
+  "boxShadow": "none",
+  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "image"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableDownload": false,
+  "enableRotation": false,
+  "flexVerticalAlignment": "start",
+  "image": "{{QRCodeGenerator.generate(NextBoxID.data[0].count)}}",
+  "imageShape": "RECTANGLE",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "e3ifjk5qtp",
+  "leftColumn": 41,
+  "maxZoomLevel": 1,
+  "mobileBottomRow": 24,
+  "mobileLeftColumn": 41,
+  "mobileRightColumn": 53,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "objectFit": "cover",
+  "parentColumnSpace": 6.9375,
+  "parentId": "licedvk0k3",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 62,
+  "topRow": 12,
+  "type": "IMAGE_WIDGET",
+  "version": 1,
+  "widgetId": "rb2vcy2msl",
+  "widgetName": "Image2"
+}

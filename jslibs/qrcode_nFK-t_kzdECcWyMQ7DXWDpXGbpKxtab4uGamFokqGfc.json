@@ -1,0 +1,10 @@
+{
+  "accessor": [
+    "qrcode"
+  ],
+  "defs": "{\"!name\":\"LIB/qrcode\",\"qrcode\":{\"!type\":\"fn()\",\"prototype\":{},\"stringToBytesFuncs\":{\"default\":{\"!type\":\"fn()\",\"prototype\":{}},\"UTF-8\":{\"!type\":\"fn()\",\"prototype\":{}}},\"stringToBytes\":{\"!type\":\"fn()\",\"prototype\":{}},\"createStringToBytes\":{\"!type\":\"fn()\",\"prototype\":{}}}}",
+  "name": "qrcode",
+  "uidString": "qrcode_https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js",
+  "url": "https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js",
+  "version": "1.4.4"
+}

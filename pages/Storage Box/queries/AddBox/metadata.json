@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.boxes (box_label, box_code, box_qr_filename,box_qr_content,box_qr_file_type)\nVALUES ('{{ ContainerLabelInput.text }}','{{ AutoGenLabel.text }}','{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].name : ''}}', DECODE('{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].data.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '') :'' }}','base64'),'{{QRCodePicker.files.length > 0 ? QRCodePicker.files[0].type.split(\"/\").pop() : ''}}');",
+      "body": "INSERT INTO public.boxes (box_label, box_code, box_qr_filename,box_qr_content,box_qr_file_type)\nVALUES ('{{ ContainerLabelInput.text }}','{{ AutoGenLabel.text }}','QRCode', DECODE('{{Image2.image.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '')}}','base64'),'gif');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
