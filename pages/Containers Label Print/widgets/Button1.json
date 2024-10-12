@@ -33,7 +33,7 @@
   "mobileRightColumn": 5,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Storage Box', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{navigateTo('Containers', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
