@@ -42,7 +42,7 @@
       "isDefault": false
     },
     {
-      "id": "Storage Box",
+      "id": "Containers",
       "isDefault": false
     },
     {
@@ -62,11 +62,15 @@
       "isDefault": false
     },
     {
-      "id": "Box",
+      "id": "Container",
       "isDefault": false
     },
     {
       "id": "Project",
+      "isDefault": false
+    },
+    {
+      "id": "Containers Label Print",
       "isDefault": false
     }
   ],

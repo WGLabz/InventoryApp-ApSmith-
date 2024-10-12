@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6703b251c982f54ff180d40c_4bd2f91d-5322-4223-98e0-43f89cbff962",
+  "id": "Containers Label Print_QRCodeGenerator",
+  "unpublishedCollection": {
+    "name": "QRCodeGenerator",
+    "pageId": "Containers Label Print",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
