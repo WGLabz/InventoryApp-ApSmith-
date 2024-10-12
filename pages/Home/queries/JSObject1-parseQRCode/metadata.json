@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6703b251c982f54ff180d40c_661cb01c-8be7-4263-b296-7992d1eaf923",
-  "id": "Home_JSObject1.init",
+  "id": "Home_JSObject1.parseQRCode",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -23,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "JSObject1.init",
-    "name": "init",
+    "fullyQualifiedName": "JSObject1.parseQRCode",
+    "name": "parseQRCode",
     "pageId": "Home",
     "userSetOnLoad": false
   }
