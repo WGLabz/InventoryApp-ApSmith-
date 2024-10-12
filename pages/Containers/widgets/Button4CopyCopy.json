@@ -44,7 +44,7 @@
   "mobileRightColumn": 32,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Box', {\n id: Table1.selectedRow.box_id\n}, 'SAME_WINDOW');}}",
+  "onClick": "{{navigateTo('Container', {\n  id: Table1.selectedRow.box_id\n}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 13.90625,
   "parentId": "0",
   "parentRowSpace": 10,
