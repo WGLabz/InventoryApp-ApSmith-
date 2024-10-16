@@ -7,6 +7,9 @@ export default {
     let labelData = GetContainers.data.filter((c) => {
       return selectedContainersArray.indexOf(c.box_id) > -1;
     });
+		//Create duplicate for each container to print 2 labels each
+		
+		labelData = labelData.flatMap( i => [i,i])
 
     // Load jsPDF from the CDN
     const pdf = jspdf.jsPDF({
