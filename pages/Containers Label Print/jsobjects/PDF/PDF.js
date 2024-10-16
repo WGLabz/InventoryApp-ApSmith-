@@ -9,7 +9,7 @@ export default {
     });
 		//Create duplicate for each container to print 2 labels each
 		
-		labelData = labelData.flatMap( i => [i,i])
+		labelData = labelData.flatMap(item => [item, { ...item }]); 
 
     // Load jsPDF from the CDN
     const pdf = jspdf.jsPDF({
