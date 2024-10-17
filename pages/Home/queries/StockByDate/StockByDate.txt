@@ -1,0 +1,52 @@
+WITH date_series AS (
+  -- Generate a series of dates between the selected start and end date
+  SELECT generate_series(
+    TO_DATE('{{ StartDate.selectedDate }}', 'YYYY-MM-DD'), 
+    TO_DATE('{{ EndDate.selectedDate }}', 'YYYY-MM-DD'), 
+    '1 day'::interval
+  )::date AS date
+),
+ordered AS (
+  -- Total ordered per day within the selected date range
+  SELECT 
+    order_date::date AS date,
+    SUM(quantity_ordered) AS total_bought
+  FROM order_parts
+  WHERE order_date::date BETWEEN TO_DATE('{{ StartDate.selectedDate }}', 'YYYY-MM-DD') 
+                             AND TO_DATE('{{ EndDate.selectedDate }}', 'YYYY-MM-DD')
+  GROUP BY order_date::date
+),
+used AS (
+  -- Total used per day within the selected date range
+  SELECT 
+    date::date AS date,  -- Replaced use_date with date
+    SUM(quantity_used) AS total_used
+  FROM project_components
+  WHERE date::date BETWEEN TO_DATE('{{ StartDate.selectedDate }}', 'YYYY-MM-DD') 
+                       AND TO_DATE('{{ EndDate.selectedDate }}', 'YYYY-MM-DD')
+  GROUP BY date::date
+),
+daily_stock AS (
+  -- Combine bought and used data for each day
+  SELECT
+    COALESCE(o.date, u.date) AS date,
+    COALESCE(o.total_bought, 0) AS total_bought,
+    COALESCE(u.total_used, 0) AS total_used,
+    (COALESCE(o.total_bought, 0) - COALESCE(u.total_used, 0)) AS stock_change
+  FROM ordered o
+  FULL OUTER JOIN used u ON o.date = u.date
+),
+combined_data AS (
+  -- Join the date series with the stock data
+  SELECT
+    d.date,
+    COALESCE(ds.stock_change, 0) AS stock_change
+  FROM date_series d
+  LEFT JOIN daily_stock ds ON d.date = ds.date
+)
+-- Final result: cumulative stock per day with carryover for missing dates
+SELECT
+  date AS x,
+  SUM(stock_change) OVER (ORDER BY date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS y
+FROM combined_data
+ORDER BY date;
