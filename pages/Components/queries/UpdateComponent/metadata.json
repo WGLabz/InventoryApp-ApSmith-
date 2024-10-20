@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE \n\tpublic.components\nSET \n\tcategory_id={{ComponentCategoryCopy1.selectedOptionValue}}, \n\tbox_id={{CmponentStorageContainerUpdate.selectedOptionValue}}, \n\tdescription='{{ComponentDescriptionUpdated.text}}',\n\timage_content= DECODE('{{ComponentImagePickerCopy.files.length > 0 ? ComponentImagePickerCopy.files[0].data.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '') : ComponentsTable.selectedRow.image_content.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '') }}','base64'),\n\timage_type= '{{ComponentImagePickerCopy.files.length > 0 ? ComponentImagePickerCopy.files[0].type.split(\"/\").pop() : ComponentsTable.selectedRow.image_type}}'\nWHERE\n\tcomponent_id = {{ComponentsTable.selectedRow.component_id}}",
+      "body": "UPDATE \n\tpublic.components\nSET \n\tcategory_id={{ComponentCategoryCopy1.selectedOptionValue}}, \n\tbox_id={{CmponentStorageContainerUpdate.selectedOptionValue}}, \n\tname='{{UpdatedName.text}}',\n\timage_content= DECODE('{{ComponentImagePickerCopy.files.length > 0 ? ComponentImagePickerCopy.files[0].data.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '') : ComponentsTable.selectedRow.image_content.replace(/^data:[a-zA-Z0-9\\/]+;base64,/, '') }}','base64'),\n\timage_type= '{{ComponentImagePickerCopy.files.length > 0 ? ComponentImagePickerCopy.files[0].type.split(\"/\").pop() : ComponentsTable.selectedRow.image_type}}'\nWHERE\n\tcomponent_id = {{ComponentsTable.selectedRow.component_id}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

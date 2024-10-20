@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "66f948a7fbfff512a970867b_55bd1d96-6b16-42ba-9f5d-1c3c901b0d88",
+  "id": "Home_QRScanner",
+  "unpublishedCollection": {
+    "name": "QRScanner",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

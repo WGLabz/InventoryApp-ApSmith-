@@ -169,7 +169,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{ComponentsTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"box_code\"]+' > '+currentRow[\"box_label\"]))}}",
+      "computedValue": "{{ComponentsTable.processedTableData.map((currentRow, currentIndex) => ( !!currentRow[\"box_code\"] && !!currentRow[\"box_label\"] ? (currentRow[\"box_code\"]+' > '+currentRow[\"box_label\"]) : ''))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
