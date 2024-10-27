@@ -18,6 +18,6 @@ LEFT
 JOIN boxes b ON b.box_id = c.box_id
 LEFT
 JOIN categories ct ON ct.category_id = c.category_id
-WHERE c.name ILIKE '%{{ ComponentsTable.searchText}}%'
+WHERE c.name ILIKE '%{{ ComponentsTable.searchText}}%' AND c.name != 'Taxes' AND c.name !='Shipping'
 ORDER BY {{!!ComponentsTable.sortOrder.column ? ComponentsTable.sortOrder.column : 'name'}} {{!!ComponentsTable.sortOrder.order ? !!ComponentsTable.sortOrder.order : 'desc'}}
 LIMIT {{ComponentsTable.pageSize}} OFFSET {{(ComponentsTable.pageNo - 1) * ComponentsTable.pageSize}};

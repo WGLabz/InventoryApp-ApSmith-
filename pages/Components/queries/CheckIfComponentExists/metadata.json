@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "CheckIfComponentExists",
     "pageId": "Components",
     "userSetOnLoad": false
