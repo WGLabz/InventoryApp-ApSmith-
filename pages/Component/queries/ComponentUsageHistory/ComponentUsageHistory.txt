@@ -1,5 +1,27 @@
-SELECT p.is_yt_project,p.project_name ,p.status, pc.quantity_used, pc.date
-FROM public.project_components pc
-LEFT
-JOIN public.projects p ON p.project_id = pc.project_id
-WHERE component_id = {{ appsmith.URL.queryParams.component}}
+SELECT 
+    p.is_yt_project,
+    p.project_name,
+    p.status,
+    pc.quantity_used,
+    pc.date AS usage_date
+FROM 
+    public.project_components pc
+LEFT JOIN 
+    public.projects p ON p.project_id = pc.project_id
+WHERE 
+    pc.component_id = {{ appsmith.URL.queryParams.component }}
+
+UNION ALL
+
+SELECT 
+    NULL AS is_yt_project,        -- No project type for general usage
+    'General Usage' AS project_name,
+    NULL AS status,               -- No project status for general usage
+    gu.quantity_used,
+    gu.usage_date
+FROM 
+    public.general_usage gu
+WHERE 
+    gu.component_id = {{ appsmith.URL.queryParams.component }}
+ORDER BY 
+    usage_date;

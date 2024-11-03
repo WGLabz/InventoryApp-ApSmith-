@@ -1,0 +1,2 @@
+INSERT INTO general_usage (component_id, quantity_used,purpose)
+	VALUES ({{ this.params.componentid }}, {{ this.params.quantity}},{{ this.params.purpose}});

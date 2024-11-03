@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT p.is_yt_project,p.project_name ,p.status, pc.quantity_used, pc.date\nFROM public.project_components pc\nLEFT\nJOIN public.projects p ON p.project_id = pc.project_id\nWHERE component_id = {{ appsmith.URL.queryParams.component}}",
+      "body": "SELECT \n    p.is_yt_project,\n    p.project_name,\n    p.status,\n    pc.quantity_used,\n    pc.date AS usage_date\nFROM \n    public.project_components pc\nLEFT JOIN \n    public.projects p ON p.project_id = pc.project_id\nWHERE \n    pc.component_id = {{ appsmith.URL.queryParams.component }}\n\nUNION ALL\n\nSELECT \n    NULL AS is_yt_project,        -- No project type for general usage\n    'General Usage' AS project_name,\n    NULL AS status,               -- No project status for general usage\n    gu.quantity_used,\n    gu.usage_date\nFROM \n    public.general_usage gu\nWHERE \n    gu.component_id = {{ appsmith.URL.queryParams.component }}\nORDER BY \n    usage_date;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
