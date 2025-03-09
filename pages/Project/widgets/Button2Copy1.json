@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 227,
+  "bottomRow": 224,
   "boxShadow": "none",
   "buttonColor": "#22c55e",
   "buttonVariant": "PRIMARY",
@@ -51,7 +51,7 @@
   "responsiveBehavior": "hug",
   "rightColumn": 64,
   "text": "Refresh",
-  "topRow": 223,
+  "topRow": 220,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "937u3g39vb",

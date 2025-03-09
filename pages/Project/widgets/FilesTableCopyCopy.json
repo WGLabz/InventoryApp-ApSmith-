@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 349,
+  "bottomRow": 346,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "canFreezeColumn": true,
   "childStylesheet": {
@@ -314,7 +314,7 @@
   "searchKey": "",
   "tableData": "{{GetComponents.data}}",
   "textSize": "0.875rem",
-  "topRow": 283,
+  "topRow": 280,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
