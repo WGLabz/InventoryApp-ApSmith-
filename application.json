@@ -72,6 +72,10 @@
     {
       "id": "Containers Label Print",
       "isDefault": false
+    },
+    {
+      "id": "Discrete Purchase",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

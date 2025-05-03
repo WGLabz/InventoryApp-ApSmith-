@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "66f948a7fbfff512a970867b_080b8c12-6cbc-492b-ac05-6f6fe9497f28",
+  "gitSyncId": "681669ad41db55303e4133c9_d589d205-b945-4793-a11b-bf195b7e5a17",
   "unpublishedPage": {
-    "isHidden": false,
+    "isHidden": true,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1080,
+          "bottomRow": 690,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 700,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 68,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 92,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "Home",
-    "slug": "home"
+    "name": "Discrete Purchase",
+    "slug": "discrete-purchase"
   }
 }
