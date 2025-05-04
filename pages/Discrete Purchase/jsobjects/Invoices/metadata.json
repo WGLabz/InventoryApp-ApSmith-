@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "681669ad41db55303e4133c9_34f671fd-e3fb-4d90-aa89-2c0cd035caa3",
+  "id": "Discrete Purchase_Invoices",
+  "unpublishedCollection": {
+    "name": "Invoices",
+    "pageId": "Discrete Purchase",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

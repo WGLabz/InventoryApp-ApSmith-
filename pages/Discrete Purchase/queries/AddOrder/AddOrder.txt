@@ -1,0 +1,5 @@
+INSERT INTO public.orders(vendor_id, order_date, total_cost, delivery_date, status)
+	VALUES ('{{ Number(Vendor.selectedOptionValue) }}',
+					'{{ DatePicker1.selectedDate}}',
+					'{{ Number(OrderData.totalCost)}}', 
+					CURRENT_DATE,'Delivered') RETURNING order_id;

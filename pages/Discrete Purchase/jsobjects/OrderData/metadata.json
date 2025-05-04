@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "681669ad41db55303e4133c9_6329fa06-37de-49f3-a639-d09baf4e86ad",
+  "id": "Discrete Purchase_OrderData",
+  "unpublishedCollection": {
+    "name": "OrderData",
+    "pageId": "Discrete Purchase",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "orderDetails",
+        "value": "[]"
+      },
+      {
+        "name": "totalCost",
+        "value": "0"
+      }
+    ]
+  }
+}

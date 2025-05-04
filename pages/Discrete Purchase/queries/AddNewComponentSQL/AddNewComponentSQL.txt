@@ -1,0 +1,19 @@
+INSERT INTO public.components(
+	name, 
+	imaeg_name,
+	category_id,
+	box_id, 
+	description, 
+	date_added,
+	image_content, 
+	image_type)
+VALUES ( 
+	'{{ this.params.name }}', 
+	'{{ this.params.imagename }}', 
+	{{ this.params.categoryid }}, 
+	{{ this.params.boxid }}, 
+	'{{ this.params.description }}', 
+	CURRENT_DATE, 
+	DECODE('{{ this.params.image.replace(/^data:[a-zA-Z0-9\/]+;base64,/, '') }}','base64'),
+	'{{ this.params.imagetype }}')
+RETURNING component_id;

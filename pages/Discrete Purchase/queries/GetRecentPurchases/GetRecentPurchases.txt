@@ -1,0 +1,9 @@
+SELECT o.order_date,v.vendor_name,v.vendor_icon_name,v.vendor_icon_type,v.vendor_icon_content,op.quantity_ordered,op.url,
+ c.name,c.imaeg_name,c.image_type,c.image_content,cs.category_name
+FROM order_parts op 
+JOIN orders o ON o.order_id = op.order_id
+JOIN vendors v ON v.vendor_id = o.vendor_id
+JOIN components c On c.component_id = op.component_id
+JOIN categories cs ON c.category_id = cs.category_id
+ORDER BY o.order_date DESC
+LIMIT 40 OFFSET 0

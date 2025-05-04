@@ -1,0 +1,1 @@
+SELECT CONCAT('data:image/',image_type,';base64,', ENCODE(image_content, 'base64')) AS Image FROM public."components" WHERE component_id = {{ Number(ComponentSelect.selectedOptionValue) }}
