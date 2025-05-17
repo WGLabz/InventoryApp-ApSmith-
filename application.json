@@ -42,10 +42,6 @@
       "isDefault": false
     },
     {
-      "id": "Containers",
-      "isDefault": false
-    },
-    {
       "id": "Components Category",
       "isDefault": false
     },
@@ -75,6 +71,10 @@
     },
     {
       "id": "Discrete Purchase",
+      "isDefault": false
+    },
+    {
+      "id": "Containers",
       "isDefault": false
     }
   ],
