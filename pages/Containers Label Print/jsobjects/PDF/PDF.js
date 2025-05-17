@@ -7,9 +7,8 @@ export default {
     let labelData = GetContainers.data.filter((c) => {
       return selectedContainersArray.indexOf(c.box_id) > -1;
     });
-		//Create duplicate for each container to print 2 labels each
-		
-		labelData = labelData.flatMap(item => [item, { ...item }]); 
+    // Create duplicate for each container to print 2 labels each
+    labelData = labelData.flatMap(item => [item, { ...item }]);
 
     // Load jsPDF from the CDN
     const pdf = jspdf.jsPDF({
@@ -25,56 +24,50 @@ export default {
     const padding = 0.1;
 
     // Increase the scaling factor for the QR code and font size
-    const qrCodeSize = Math.min(labelWidthInches, labelHeightInches) * 0.85;  // QR code size factor
-    const fontSize = Math.min(labelWidthInches, labelHeightInches) * 10;  // Font size
-    const textBold = 'bold'; // Font style for bold text
+    const qrCodeSize = Math.min(labelWidthInches, labelHeightInches) * 0.85;
+    const fontSize = Math.min(labelWidthInches, labelHeightInches) * 10;
+    const textBold = 'bold';
 
-    // Set the font size and bold style for the label text
     pdf.setFont('helvetica', textBold);
     pdf.setFontSize(fontSize);
-    // Position coordinates
+
     let x = 0;
     let y = 0;
 
-    // Loop through each label data
     for (const label of labelData) {
-      if (x + labelWidthInches > pageWidth) {
-        // Move to next row if label exceeds page width
-        x = 0;
-        y += labelHeightInches + padding;
-      }
-
-      // Generate QR code for the label (as a base64 image)
-      const qrCodeImage = QRCodeGenerator.generate(label.box_id);
-
-      // Add QR Code Image to PDF (larger size)
-      pdf.addImage(qrCodeImage, 'PNG', x + padding, y + padding, qrCodeSize, qrCodeSize);  // Bigger QR code
-
-      // Add Code Text
-      pdf.text(`${label.box_code}`, x + qrCodeSize + padding * 2, y + padding + fontSize / 72);  // Adjust text positioning
-
-      // **Text Wrapping for Label Text**:
-      // Split label text into multiple lines to fit within label width
-      const wrappedLabelText = pdf.splitTextToSize(`${label.box_label}`, labelWidthInches - qrCodeSize - padding * 3);
-      
-      // Add the wrapped text to the PDF
-      pdf.text(wrappedLabelText, x + qrCodeSize + padding * 2, y + padding + (fontSize / 72) * 3);  // Text below code, with wrapping
-
-      // Draw a rectangle around the label (optional)
-      pdf.rect(x, y, labelWidthInches, labelHeightInches);
-
-      // Move x position for the next label
-      x += labelWidthInches + padding;
-
-      // Add new page if the content exceeds the page height
-      if (y + labelHeightInches > pageHeight) {
+      // Check if the next label would exceed the page height considering margin
+      if (y + labelHeightInches + padding > pageHeight) {
         pdf.addPage();
         x = 0;
         y = 0;
       }
+
+      // Move to the next row if the label exceeds page width
+      if (x + labelWidthInches + padding > pageWidth) {
+        x = 0;
+        y += labelHeightInches + padding;
+
+        // Check again after moving to the next row
+        if (y + labelHeightInches + padding > pageHeight) {
+          pdf.addPage();
+          x = 0;
+          y = 0;
+        }
+      }
+
+      const qrCodeImage = QRCodeGenerator.generate(label.box_id);
+      pdf.addImage(qrCodeImage, 'PNG', x + padding, y + padding, qrCodeSize, qrCodeSize);
+
+      pdf.text(`${label.box_code}`, x + qrCodeSize + padding * 2, y + padding + fontSize / 72);
+
+      const wrappedLabelText = pdf.splitTextToSize(`${label.box_label}`, labelWidthInches - qrCodeSize - padding * 3);
+      pdf.text(wrappedLabelText, x + qrCodeSize + padding * 2, y + padding + (fontSize / 72) * 3);
+
+      pdf.rect(x, y, labelWidthInches, labelHeightInches);
+
+      x += labelWidthInches + padding;
     }
 
-    // Get the base64 data for the PDF
     const base64PDF = pdf.output('datauristring');
     return base64PDF;
   }
