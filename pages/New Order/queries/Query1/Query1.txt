@@ -1,0 +1,1 @@
+SELECT order_date,SUM(total_cost) FROM Orders GROUP BY order_date ORDER BY order_date ASC
