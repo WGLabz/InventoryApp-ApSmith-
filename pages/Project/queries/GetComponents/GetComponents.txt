@@ -1,4 +1,34 @@
-SELECT c.name,c.description, c.component_id,c.image_content,c.image_type,pc.quantity_used FROM project_components pc
-LEFT 
-JOIN components c ON pc.component_id = c.component_id
-WHERE pc.project_id = {{ appsmith.URL.queryParams.id }}
+WITH avg_costs AS (
+    SELECT component_id, AVG(unit_cost) AS avg_cost
+    FROM order_parts
+    GROUP BY component_id
+),
+detailed AS (
+    SELECT 
+        c.name,
+        c.description,
+        c.component_id,
+        c.image_content,
+        c.image_type,
+        pc.quantity_used,
+        ac.avg_cost,
+        (pc.quantity_used * ac.avg_cost) AS cost
+    FROM project_components pc
+    LEFT JOIN components c ON pc.component_id = c.component_id
+    LEFT JOIN avg_costs ac ON pc.component_id = ac.component_id
+    WHERE pc.project_id = {{ appsmith.URL.queryParams.id }}
+)
+SELECT * FROM detailed
+
+UNION ALL
+
+SELECT 
+    'Total Cost' AS name,
+    NULL AS description,
+    NULL AS component_id,
+    NULL AS image_content,
+    NULL AS image_type,
+    NULL AS quantity_used,
+    NULL AS avg_cost,
+    SUM(cost) AS cost
+FROM detailed;

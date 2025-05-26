@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 11,
   "boxShadow": "none",
   "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( GetProject.data[0].projectstatus))(ProjectStatus.options, ProjectStatus.serverSideFiltering) }}",
   "dynamicBindingPathList": [
@@ -56,7 +56,7 @@
   "rightColumn": 15,
   "serverSideFiltering": false,
   "sourceData": "[\n  {\n    \"name\": \"Created\",\n    \"code\": \"CREATED\"\n  },\n  {\n    \"name\": \"In Progress\",\n    \"code\": \"INPROGRESS\"\n  },\n  {\n    \"name\": \"Complete\",\n    \"code\": \"COMPLETE\"\n  }\n]",
-  "topRow": 4,
+  "topRow": 7,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "pt8r20t89g",

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT c.name,c.description, c.component_id,c.image_content,c.image_type,pc.quantity_used FROM project_components pc\nLEFT \nJOIN components c ON pc.component_id = c.component_id\nWHERE pc.project_id = {{ appsmith.URL.queryParams.id }}",
+      "body": "WITH avg_costs AS (\n    SELECT component_id, AVG(unit_cost) AS avg_cost\n    FROM order_parts\n    GROUP BY component_id\n),\ndetailed AS (\n    SELECT \n        c.name,\n        c.description,\n        c.component_id,\n        c.image_content,\n        c.image_type,\n        pc.quantity_used,\n        ac.avg_cost,\n        (pc.quantity_used * ac.avg_cost) AS cost\n    FROM project_components pc\n    LEFT JOIN components c ON pc.component_id = c.component_id\n    LEFT JOIN avg_costs ac ON pc.component_id = ac.component_id\n    WHERE pc.project_id = {{ appsmith.URL.queryParams.id }}\n)\nSELECT * FROM detailed\n\nUNION ALL\n\nSELECT \n    'Total Cost' AS name,\n    NULL AS description,\n    NULL AS component_id,\n    NULL AS image_content,\n    NULL AS image_type,\n    NULL AS quantity_used,\n    NULL AS avg_cost,\n    SUM(cost) AS cost\nFROM detailed;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
