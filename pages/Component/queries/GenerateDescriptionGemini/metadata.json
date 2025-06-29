@@ -43,9 +43,9 @@
         "key": "formData.messages.data[1].content"
       }
     ],
-    "executeOnLoad": false,
     "name": "GenerateDescriptionGemini",
     "pageId": "Component",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

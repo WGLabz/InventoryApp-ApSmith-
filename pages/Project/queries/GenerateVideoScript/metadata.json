@@ -38,9 +38,9 @@
         "key": "formData.messages.data[0].content"
       }
     ],
-    "executeOnLoad": false,
     "name": "GenerateVideoScript",
     "pageId": "Project",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

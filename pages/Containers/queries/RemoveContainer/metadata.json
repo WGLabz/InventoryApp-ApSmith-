@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "RemoveContainer",
     "pageId": "Containers",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

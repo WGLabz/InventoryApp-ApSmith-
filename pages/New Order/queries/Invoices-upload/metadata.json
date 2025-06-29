@@ -23,10 +23,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "Invoices.upload",
     "name": "upload",
     "pageId": "New Order",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

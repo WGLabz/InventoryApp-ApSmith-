@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "AI.generateDescription",
     "name": "generateDescription",
     "pageId": "Project",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }

@@ -86,9 +86,9 @@
         "key": "formData.body.data"
       }
     ],
-    "executeOnLoad": false,
     "name": "SaveInvoiceToMinIO",
     "pageId": "Discrete Purchase",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

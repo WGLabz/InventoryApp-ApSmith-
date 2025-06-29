@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "CopyComponent",
     "pageId": "Components",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

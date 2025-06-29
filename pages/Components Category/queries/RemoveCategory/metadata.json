@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "RemoveCategory",
     "pageId": "Components Category",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

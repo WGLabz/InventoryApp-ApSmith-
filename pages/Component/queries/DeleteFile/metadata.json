@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "DeleteFile",
     "pageId": "Component",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

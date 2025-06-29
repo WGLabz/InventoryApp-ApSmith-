@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "RemoveVendor",
     "pageId": "Vendors",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

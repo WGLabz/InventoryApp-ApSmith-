@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "OrderData.removeFromOrder",
     "name": "removeFromOrder",
     "pageId": "Discrete Purchase",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

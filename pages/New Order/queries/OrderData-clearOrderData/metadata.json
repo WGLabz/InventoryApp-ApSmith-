@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "OrderData.clearOrderData",
     "name": "clearOrderData",
     "pageId": "New Order",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

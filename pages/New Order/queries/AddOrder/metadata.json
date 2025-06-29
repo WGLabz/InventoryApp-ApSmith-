@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "AddOrder",
     "pageId": "New Order",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

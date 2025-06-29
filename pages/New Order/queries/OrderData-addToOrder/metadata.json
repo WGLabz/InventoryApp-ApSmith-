@@ -23,10 +23,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "OrderData.addToOrder",
     "name": "addToOrder",
     "pageId": "New Order",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

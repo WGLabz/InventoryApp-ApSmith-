@@ -37,9 +37,9 @@
         "key": "path"
       }
     ],
-    "executeOnLoad": true,
     "name": "Github",
     "pageId": "Project",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }
 }

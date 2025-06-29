@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "QRCodeGenerator.generate",
     "name": "generate",
     "pageId": "Containers",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

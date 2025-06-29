@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "Component_.copy",
     "name": "copy",
     "pageId": "Components",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

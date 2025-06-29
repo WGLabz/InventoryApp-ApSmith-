@@ -86,9 +86,9 @@
         "key": "formData.body.data"
       }
     ],
-    "executeOnLoad": false,
     "name": "SaveFileToMinIO",
     "pageId": "Component",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

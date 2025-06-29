@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "ContainerScripts.RemoveContainer",
     "name": "RemoveContainer",
     "pageId": "Containers",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

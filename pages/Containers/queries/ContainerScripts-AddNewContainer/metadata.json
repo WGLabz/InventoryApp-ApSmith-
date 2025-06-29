@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "ContainerScripts.AddNewContainer",
     "name": "AddNewContainer",
     "pageId": "Containers",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

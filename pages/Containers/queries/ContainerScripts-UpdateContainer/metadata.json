@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "ContainerScripts.UpdateContainer",
     "name": "UpdateContainer",
     "pageId": "Containers",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

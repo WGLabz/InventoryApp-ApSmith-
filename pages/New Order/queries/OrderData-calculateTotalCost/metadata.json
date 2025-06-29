@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "OrderData.calculateTotalCost",
     "name": "calculateTotalCost",
     "pageId": "New Order",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

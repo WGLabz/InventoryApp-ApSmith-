@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "Files.downloadLink",
     "name": "downloadLink",
     "pageId": "Component",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

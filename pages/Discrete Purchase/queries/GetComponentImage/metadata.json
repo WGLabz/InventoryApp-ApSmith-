@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "GetComponentImage",
     "pageId": "Discrete Purchase",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "ProjectComponentCart.removeFromOrder",
     "name": "removeFromOrder",
     "pageId": "Project",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

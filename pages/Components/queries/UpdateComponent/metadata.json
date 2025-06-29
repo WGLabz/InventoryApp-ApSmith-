@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "UpdateComponent",
     "pageId": "Components",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

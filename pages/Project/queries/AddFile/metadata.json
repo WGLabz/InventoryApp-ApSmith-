@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "AddFile",
     "pageId": "Project",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

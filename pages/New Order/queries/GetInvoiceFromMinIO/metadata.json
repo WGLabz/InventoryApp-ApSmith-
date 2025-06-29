@@ -86,9 +86,9 @@
         "key": "formData.path.data"
       }
     ],
-    "executeOnLoad": false,
     "name": "GetInvoiceFromMinIO",
     "pageId": "New Order",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

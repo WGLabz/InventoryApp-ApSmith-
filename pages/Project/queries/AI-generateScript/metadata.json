@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "AI.generateScript",
     "name": "generateScript",
     "pageId": "Project",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": true
   }
 }

@@ -86,9 +86,9 @@
         "key": "formData.path.data"
       }
     ],
-    "executeOnLoad": false,
     "name": "GetFileFromMinIO",
     "pageId": "Project",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
